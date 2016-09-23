@@ -9,10 +9,6 @@ namespace G01
     public class Class1 {
      //me ves belen
 
-
-
-
-
-        //pues vamos a probar
+        //escribo te veo 14:47
     }
 }

@@ -8,5 +8,7 @@ namespace G01
 {
     public class Class1 {
      //me ves belen
+
+        //escribo te veo 14:47
     }
 }

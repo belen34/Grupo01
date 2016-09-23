@@ -9,7 +9,7 @@ namespace G01
     public class Class1
     {
 
-        //////jajajajajajajajajajaj ojala 
+
 
         ///////lkjlkdjadlakjdldkajdlkasjdalkdjaslkdjadslkdsaj
     }

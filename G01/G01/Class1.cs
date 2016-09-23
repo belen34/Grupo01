@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace G01
 {
-    public class Class1
-    {
+    public class Class1 {
+        ////kjdalkdjadlakjdaldkjdlkdjadlakajdaldkjad
 
 
 

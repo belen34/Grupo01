@@ -7,10 +7,6 @@ using System.Threading.Tasks;
 namespace G01
 {
     public class Class1 {
-        ////kjdalkdjadlakjdaldkjdlkdjadlakajdaldkjad
-
-        ///kñadkñskfsñfks
-
-        ///////lkjlkdjadlakjdldkajdlkasjdalkdjaslkdjadslkdsaj
+     //me ves belen
     }
 }

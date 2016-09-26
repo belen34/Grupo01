@@ -83,12 +83,19 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="OperadorLogicoTest.cs" />
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\G01\G01.csproj">
+      <Project>{BE5788C2-7750-4358-BDAA-6BF3369CBB59}</Project>
+      <Name>G01</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

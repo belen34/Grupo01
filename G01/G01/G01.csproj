@@ -61,23 +61,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\IOperadorLogicoController.cs" />
+    <Compile Include="Controller\OperadorLogicoController.cs" />
     <Compile Include="MotorReglasDB.cs" />
-    <Compile Include="ObjectVO\OperadorLogico.cs" />
+    <Compile Include="ObjectVO\OperadorLogicoVO.cs" />
     <Compile Include="ObjectVO\ReglaVO.cs" />
     <Compile Include="Object\OperadorLogicoObj.cs" />
     <Compile Include="Object\ReglaObj.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\IOperadorLogicoRepository.cs" />
+    <Compile Include="Repository\OperadorLogicoRepository.cs" />
+    <Compile Include="Service\IOperadorLogicoService.cs" />
+    <Compile Include="Service\OperadorLogicoService.cs" />
+    <Compile Include="Util\IOperadorLogicoUtil.cs" />
+    <Compile Include="Util\IReglaUtil.cs" />
+    <Compile Include="Util\OperadorLogicoUtil.cs" />
+    <Compile Include="Util\ReglaUtil.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controller\" />
-    <Folder Include="Repository\" />
-    <Folder Include="Service\" />
-    <Folder Include="Util\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

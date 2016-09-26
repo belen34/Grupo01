@@ -3,22 +3,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.ComponentModel.DataAnnotations;
 
-namespace G01.Object
+namespace G01.ObjectVO
 {
-    public class OperadorLogicoObj
+    public class OperadorLogicoVO
     {
-        [Key]
+       
         public int operadorlogicoId { get; set; }
         public string name { get; set; }
 
-        public OperadorLogicoObj()
+        public OperadorLogicoVO()
         {
 
         }
 
-        public OperadorLogicoObj(int _operadorlogicoId, string _name)
+        public OperadorLogicoVO(int _operadorlogicoId, string _name)
         {
             this.operadorlogicoId = _operadorlogicoId;
             this.name = _name;

@@ -16,9 +16,9 @@ namespace G01
         {
         }
 
-        public DbSet<ReglaObj> Recipes { get; set; }
-        public DbSet<OperadorLogicoObj> Doctors { get; set; }
-        public DbSet<OperadorComparacionObj> Farmacos { get; set; }
+        public DbSet<ReglaObj> Reglas { get; set; }
+        public DbSet<OperadorLogicoObj> Operadoreslogicos { get; set; }
+        public DbSet<OperadorComparacionObj> OperadoresComparacion { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();

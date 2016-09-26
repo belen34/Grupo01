@@ -4,11 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace G01
+namespace G01.ObjectVO
 {
-    public class Class1 {
-     //me ves belen
-
-        //escribo te veo 14:47
+    public class ReglaVO
+    {
     }
 }

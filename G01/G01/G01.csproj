@@ -61,7 +61,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="MotorReglasDB.cs" />
+    <Compile Include="ObjectVO\OperadorLogico.cs" />
+    <Compile Include="ObjectVO\ReglaVO.cs" />
+    <Compile Include="Object\OperadorLogicoObj.cs" />
+    <Compile Include="Object\ReglaObj.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -70,8 +74,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controller\" />
-    <Folder Include="ObjectVO\" />
-    <Folder Include="Object\" />
     <Folder Include="Repository\" />
     <Folder Include="Service\" />
     <Folder Include="Util\" />

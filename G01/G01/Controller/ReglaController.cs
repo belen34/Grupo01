@@ -31,6 +31,8 @@ namespace G01.Controller
         }
         public List<ReglaVO> ListReglas()
         {
+
+
             return this.iReglaService.ListReglas();
         }
         public ReglaVO UpDate(ReglaVO _ReglaId)

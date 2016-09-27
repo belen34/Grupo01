@@ -10,8 +10,8 @@ namespace G01.Object
     public class OperadorComparacionObj
     {
         [Key]
-        public int operadorComparacionId;
-        public string name;
+        public int operadorComparacionId { get; set; }
+        public string name { get; set; }
 
         public OperadorComparacionObj()
         {
@@ -22,6 +22,7 @@ namespace G01.Object
         {
             this.operadorComparacionId = _operadorComparacionId;
             this.name = _name;
+
         }
     }
 }

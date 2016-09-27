@@ -14,5 +14,6 @@ namespace G01.Controller
         ReglaVO Give(int _ReglaId);
         List<ReglaVO> ListReglas();
         ReglaVO UpDate(ReglaVO _Regla);
+
     }
 }

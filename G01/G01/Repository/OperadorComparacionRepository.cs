@@ -13,7 +13,7 @@ namespace G01.Repository
         {
             using (var MotorReglasDB = new MotorReglasDB())
             {
-                return MotorReglasDB.OperadorComparacionObj.ToList();
+                return MotorReglasDB.OperadoresComparacion.ToList();
             }
         }
     }

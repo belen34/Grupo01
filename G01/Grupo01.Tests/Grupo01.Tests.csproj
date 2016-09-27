@@ -63,13 +63,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Grupo01\Grupo01.csproj">
-      <Project>{6C0174FC-3282-41DA-8F82-89DD40EA8996}</Project>
-      <Name>Grupo01</Name>
-    </ProjectReference>
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <ProjectReference Include="..\Grupo01\Grupo01.csproj">
+      <Project>{6c0174fc-3282-41da-8f82-89dd40ea8996}</Project>
+      <Name>Grupo01</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

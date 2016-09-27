@@ -24,7 +24,7 @@ namespace G01.Service
 
         public List<OperadorComparacionVO> ListOperadorComparacion()
         {
-            ICollection<OperadorComparacionObj> l = this.iOperadorComparacionRepository.ListOperadorComparacion();
+            ICollection<OperadorComparacionObj> l = this.iOperadorComparacionRepository.ListOperadorComparacionObj();
 
             return (List<OperadorComparacionVO>)this.iOperadorComparacionUtil.ConviertEntityListToVOList(l);
         }

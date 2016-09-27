@@ -62,17 +62,24 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\IOperadorLogicoController.cs" />
+    <Compile Include="Controller\IReglaController.cs" />
     <Compile Include="Controller\OperadorLogicoController.cs" />
+    <Compile Include="Controller\ReglaController.cs" />
     <Compile Include="MotorReglasDB.cs" />
     <Compile Include="ObjectVO\OperadorLogicoVO.cs" />
     <Compile Include="ObjectVO\ReglaVO.cs" />
+    <Compile Include="Object\OperadorComparacionObj.cs" />
     <Compile Include="Object\OperadorLogicoObj.cs" />
     <Compile Include="Object\ReglaObj.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\IOperadorLogicoRepository.cs" />
+    <Compile Include="Repository\IReglaRepository.cs" />
     <Compile Include="Repository\OperadorLogicoRepository.cs" />
+    <Compile Include="Repository\ReglaRepositorio.cs" />
     <Compile Include="Service\IOperadorLogicoService.cs" />
+    <Compile Include="Service\IReglaService.cs" />
     <Compile Include="Service\OperadorLogicoService.cs" />
+    <Compile Include="Service\ReglaService.cs" />
     <Compile Include="Util\IOperadorLogicoUtil.cs" />
     <Compile Include="Util\IReglaUtil.cs" />
     <Compile Include="Util\OperadorLogicoUtil.cs" />

@@ -15,7 +15,7 @@ namespace G01.ObjectVO
         public string texto1 { get; set; }
         public string texto2 { get; set; }
 
-        public virtual OperadorComparacionObj OperadorComparacionObj { get; set; }
+        //public virtual OperadorComparacionObj OperadorComparacionObj { get; set; }
 
         public ReglaVO()
         {

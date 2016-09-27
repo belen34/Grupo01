@@ -1,0 +1,13 @@
+﻿<div id="addLogico">
+    <h2> Añadir un operador:</h2>
+
+    <br>
+    <div>
+        <label>Nombre del operador:</label> <input id="OperadorName" #operadorName />
+
+        <button (click)="addOperador(operadorName.value); operadorName.value='';">
+            Add
+        </button>
+    </div>
+    <button (click)="goBack()">Atras</button>
+</div>

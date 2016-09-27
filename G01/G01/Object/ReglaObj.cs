@@ -17,8 +17,8 @@ namespace G01.Object
         public string texto1 { get; set; }
         public string texto2 { get; set; }
 
-        [ForeignKey("operadorcomparacionId")]
-        public virtual OperadorComparacionObj OperadorComparacionObj { get; set; }
+        //[ForeignKey("operadorcomparacionId")]
+        //public virtual OperadorComparacionObj OperadorComparacionObj { get; set; }
 
 
         public ReglaObj()

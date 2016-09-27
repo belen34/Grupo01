@@ -1,0 +1,15 @@
+﻿<div *ngIf="operador">
+    <h2>Detalles del operador:</h2>
+    <div>
+        <label>Id del operador: </label>{{operador.operadorId}}
+    </div>
+    <div>
+
+        <label >Nombre del operador: </label>
+
+        <input id="OperadorName" [(ngModel)]="operador.name" placeholder="name" />
+
+    </div>
+    <button id="SaveOperador" (click)="save()">Guardar</button>
+    <button (click)="goBack()">Atras</button>
+</div>

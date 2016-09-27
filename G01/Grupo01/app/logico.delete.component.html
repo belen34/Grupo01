@@ -1,0 +1,8 @@
+﻿<div *ngIf="logico != undefined">
+    <h3 id="messageDelete">El operador se ha eliminado con éxito </h3>
+    <button (click)="goBack()"> Atras </button>
+</div>
+<div *ngIf="logico == undefined">
+    <h3 id="messageDelete">El logico no se ha podido eliminar </h3>
+    <button (click)="goBack()"> Atras </button>
+</div>

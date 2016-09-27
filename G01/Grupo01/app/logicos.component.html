@@ -1,0 +1,29 @@
+﻿<h2 id="logicosStorege"> Operadores almacenados </h2>
+<div *ngIf="logicos != undefined">
+    <a id="add" [routerLink]="['/addLogico']" routerLinkActive="active">Añadir un logico</a>
+    <table id="logicos">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+            </tr>
+        </thead>
+        <tr *ngFor="let logico of logicos" [class.selected]="logico === selectedLogico"
+            (click)="onSelect(logico)">
+            <td>{{logico.name}} </td>
+        </tr>
+    </table>
+    <div *ngIf="selectedLogico">
+        <h2 id="MessageDetail">
+
+            Logico:  {{selectedLogico.name }}
+        </h2>
+        <button id="edit" (click)="gotoDetail()">Editar logico</button>
+        <button id="delete"
+                (click)="delete(selectedLogico); $event.stopPropagation()">
+            Borrar Operador {{selectedLogico.name}}
+        </button>
+    </div>
+    </div>
+<div *ngIf="logicos == undefined">
+    <h2>Cargando....</h2>
+</div>

@@ -28,11 +28,10 @@ var LogicosComponent = (function () {
         this.selectedLogico = logico;
     };
     LogicosComponent.prototype.gotoDetail = function () {
-        this.router.navigate(['/detaillogico', this.selectedLogico.logicoId]);
+        this.router.navigate(['/detaillogico', this.selectedLogico.operadorlogicoId]);
     };
     LogicosComponent.prototype.delete = function (logico) {
-        console.log("El valor seleccionado", logico.logicoId);
-        this.router.navigate(['/deletelogico', logico.logicoId]);
+        this.router.navigate(['/deletelogico', logico.operadorlogicoId]);
     };
     LogicosComponent = __decorate([
         core_1.Component({

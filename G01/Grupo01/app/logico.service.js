@@ -27,9 +27,9 @@ var LogicoService = (function () {
             .then(function (response) { return response.json(); })
             .catch(this.handleError);
     };
-    LogicoService.prototype.getLogico = function (logicoId) {
+    LogicoService.prototype.getLogico = function (operadorlogicoId) {
         return this.getlogicos()
-            .then(function (logicos) { return logicos.find(function (logico) { return logico.logicoId === logicoId; }); });
+            .then(function (logicos) { return logicos.find(function (logico) { return logico.operadorlogicoId === operadorlogicoId; }); });
     };
     LogicoService.prototype.delete = function (index) {
         var url = this.logicosUrl + "/" + index;
@@ -47,7 +47,7 @@ var LogicoService = (function () {
             .catch(this.handleError);
     };
     LogicoService.prototype.updateLogico = function (logico) {
-        var url = this.logicosUrl + "/" + logico.logicoId;
+        var url = this.logicosUrl + "/" + logico.operadorlogicoId;
         return this.http
             .put(url, JSON.stringify(logico), { headers: this.headers })
             .toPromise()

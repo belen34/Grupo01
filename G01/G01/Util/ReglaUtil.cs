@@ -17,7 +17,7 @@ namespace G01.Util
             res.operadorcomparacionId = _regla.operadorcomparacionId;
             res.texto1 = _regla.texto1;
             res.texto2 = _regla.texto2;
-            //res.OperadorComparacionObj = _regla.OperadorComparacionObj;
+            res.OperadorComparacionObj = _regla.OperadorComparacionObj;
 
             return res;
         }
@@ -28,7 +28,7 @@ namespace G01.Util
             res.operadorcomparacionId = _regla.operadorcomparacionId;
             res.texto1 = _regla.texto1;
             res.texto2 = _regla.texto2;
-            //res.OperadorComparacionObj = _regla.OperadorComparacionObj;
+            res.OperadorComparacionObj = _regla.OperadorComparacionObj;
             return res;
         }
 

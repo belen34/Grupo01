@@ -26,7 +26,7 @@ export class LogicosDetailComponent implements OnInit {
             this.LogicoService.getLogico(id)
                 .then(logico => this.logico = logico);
         });
-
+      
     }
 
     ngOnDestroy() {

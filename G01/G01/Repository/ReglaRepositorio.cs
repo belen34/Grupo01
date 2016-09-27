@@ -10,12 +10,16 @@ namespace G01.Repository
 {
     public class ReglaRepositorio: IReglaRepository
     {
-        public ReglaObj Give(int _Regla)
+        public ReglaObj Give(int _ReglaId)
         {
             ReglaObj r = null;
             using (var MotorReglasDB = new MotorReglasDB())
             {
-                r = MotorReglasDB.Reglas.Find(_Regla);
+               // r = MotorReglasDB.Reglas.Find(_Regla);
+                r = MotorReglasDB.Reglas
+                   .Include(v2 => v2.OperadorComparacionObj)
+                   .Where(v3 => v3.reglaId == _ReglaId)
+                   .FirstOrDefault();
             }
             return r;
         }
@@ -23,7 +27,7 @@ namespace G01.Repository
         {
             ReglaObj r = new ReglaObj();
             r.reglaId = 0;
-            r.operadorcomparacionId = 1;
+            r.operadorcomparacionId = operadorComparacionId;
             r.texto1 = _texto1;
             r.texto2 = _texto2;
 
@@ -67,7 +71,7 @@ namespace G01.Repository
         {
             using (var MotorReglasDB = new MotorReglasDB())
             {
-                return MotorReglasDB.Reglas.ToList();
+                return MotorReglasDB.Reglas.Include("OperadorComparacionObj").ToList();
             }
         }
     }

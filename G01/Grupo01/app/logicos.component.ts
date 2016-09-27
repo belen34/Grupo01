@@ -30,11 +30,11 @@ export class LogicosComponent implements OnInit {
       
     }
     gotoDetail(): void {
-
-        this.router.navigate(['/detaillogico', this.selectedLogico.logicoId])
+        
+        this.router.navigate(['/detaillogico', this.selectedLogico.operadorlogicoId])
     }
     delete(logico: Logico): void {
-        console.log("El valor seleccionado", logico.logicoId);
-        this.router.navigate(['/deletelogico', logico.logicoId]);
+     
+        this.router.navigate(['/deletelogico', logico.operadorlogicoId]);
     }
 }

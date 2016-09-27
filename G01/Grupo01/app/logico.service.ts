@@ -21,10 +21,10 @@ export class LogicoService {
             .then(response => response.json() as Logico[])
             .catch(this.handleError);
     }
-    getLogico(logicoId: number) {
+    getLogico(operadorlogicoId: number) {
 
         return this.getlogicos()
-            .then(logicos => logicos.find(logico => logico.logicoId === logicoId))
+            .then(logicos => logicos.find(logico => logico.operadorlogicoId === operadorlogicoId))
 
     }
     delete(index: number) {
@@ -49,7 +49,7 @@ export class LogicoService {
     }
     updateLogico(logico: Logico): Promise<Logico> {
 
-        const url = `${this.logicosUrl}/${logico.logicoId}`;
+        const url = `${this.logicosUrl}/${logico.operadorlogicoId}`;
         return this.http
             .put(url, JSON.stringify(logico), { headers: this.headers })
             .toPromise()

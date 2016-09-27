@@ -1,9 +1,9 @@
 ﻿export class Logico {
-    logicoId: number;
+    operadorlogicoId: number;
     name: string;
 
-    constructor(logicoId: number, name: string) {
-        this.logicoId = logicoId;
+    constructor(operadorlogicoId: number, name: string) {
+        this.operadorlogicoId = operadorlogicoId;
         this.name = name;
     }
 }

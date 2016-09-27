@@ -17,7 +17,7 @@
 
             Logico:  {{selectedLogico.name }}
         </h2>
-        <button id="edit" (click)="gotoDetail()">Editar logico</button>
+        <button id="edit" (click)="gotoDetail()">Editar logico {{selectedLogico.name}}</button>
         <button id="delete"
                 (click)="delete(selectedLogico); $event.stopPropagation()">
             Borrar Operador {{selectedLogico.name}}

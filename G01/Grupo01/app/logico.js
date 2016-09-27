@@ -1,7 +1,7 @@
 "use strict";
 var Logico = (function () {
-    function Logico(logicoId, name) {
-        this.logicoId = logicoId;
+    function Logico(operadorlogicoId, name) {
+        this.operadorlogicoId = operadorlogicoId;
         this.name = name;
     }
     return Logico;

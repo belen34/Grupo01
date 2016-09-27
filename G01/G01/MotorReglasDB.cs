@@ -18,7 +18,7 @@ namespace G01
 
         public DbSet<ReglaObj> Reglas { get; set; }
         public DbSet<OperadorLogicoObj> Operadoreslogicos { get; set; }
-        //public DbSet<OperadorComparacionObj> OperadoresComparacion { get; set; }
+        public DbSet<OperadorComparacionObj> OperadoresComparacion { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();

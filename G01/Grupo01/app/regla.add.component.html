@@ -1,0 +1,13 @@
+﻿<div id="addRegla">
+    <h2> Añadir un nueva Regla:</h2>
+
+    <br>
+    <div>
+        <label>Nombre de la regla:</label> <input id="ReglaName" #reglaName />
+        
+        <button (click)="addRegla(reglaName.value); reglaName.value='';">
+            Add
+        </button>
+    </div>
+    <button (click)="goBack()">Atras</button>
+</div>

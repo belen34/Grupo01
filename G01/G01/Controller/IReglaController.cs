@@ -9,7 +9,7 @@ namespace G01.Controller
 {
     public interface IReglaController
     {
-        ReglaVO Create(int reglaId, string nombre);
+        ReglaVO Create( string nombre);
         ReglaVO Delete(int _ReglaId);
         ReglaVO Give(int _ReglaId);
         List<ReglaVO> ListReglas();

@@ -166,6 +166,7 @@
     <Compile Include="Controllers\operadorcomparacionsController.cs" />
     <Compile Include="Controllers\OperardorLogicosController.cs" />
     <Compile Include="Controllers\CondicionsController.cs" />
+    <Compile Include="Controllers\ReglaController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

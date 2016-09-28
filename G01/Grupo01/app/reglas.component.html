@@ -1,0 +1,29 @@
+﻿<h2 id="reglasStorege"> Reglas almacenados </h2>
+<div *ngIf="reglas != undefined">
+    <a id="add" [routerLink]="['/addRegla']" routerLinkActive="active">Añadir una Regla</a>
+    <table id="reglas">
+        <thead>
+        <tr>
+            <th>Nombre</th>
+        </tr>
+        </thead>
+        <tr *ngFor="let regla of reglas" [class.selected]="regla === selectedRegla"
+            (click)="onSelect(regla)">
+            <td>  {{regla.name}} </td>
+        </tr>
+    </table>
+    <div *ngIf="selectedRegla">
+        <h2 id="MessageDetail">
+
+            Regla:  {{selectedRegla.name }}
+        </h2>
+        <button id="edit" (click)="gotoDetail()">Editar regla</button>
+        <button id="delete"
+                (click)="delete(selectedRegla); $event.stopPropagation()">
+            Borrar regla
+        </button>
+    </div>
+</div>
+<div *ngIf="reglas == undefined">
+    <h2>Cargando....</h2>
+</div>

@@ -21,9 +21,9 @@ namespace G01.Service
             this.iReglaUtil = _iReglaUtil;
         }
 
-        public ReglaVO Create(int _reglaId, string _nombre)
+        public ReglaVO Create( string _nombre)
         {
-            ReglaObj r = this.iReglaServiceRepository.Create(_reglaId,_nombre);
+            ReglaObj r = this.iReglaServiceRepository.Create(_nombre);
             return this.iReglaUtil.ConviertEntityToVO(r);
         }
         public ReglaVO Delete(int _ReglaId)

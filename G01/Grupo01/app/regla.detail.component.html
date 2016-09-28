@@ -1,0 +1,15 @@
+﻿<div *ngIf="doctor">
+    <h2>Detalles de la Regla:</h2>
+    <div>
+        <label>Id de la Regla: </label>{{regla.reglaId}}
+    </div>
+    <div>
+       
+        <label>Nombre de la Regla: </label>
+
+        <input id="ReglaName" [(ngModel)]="regla.name" placeholder="name" />
+ 
+    </div>
+    <button id="SaveRegla" (click)="save()">Guardar</button>
+    <button (click)="goBack()">Atras</button>
+</div>

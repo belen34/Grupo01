@@ -1,0 +1,8 @@
+﻿<div *ngIf="regla != undefined">
+    <h3 id="messageDelete">La regla se ha eliminado con éxito </h3>
+    <button (click)="goBack()"> Atras </button>
+</div>
+<div *ngIf="regla == undefined">
+    <h3 id="messageDelete">La regla no se ha podido eliminar </h3>
+    <button (click)="goBack()"> Atras </button>
+</div>

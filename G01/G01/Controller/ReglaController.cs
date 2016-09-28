@@ -17,9 +17,9 @@ namespace G01.Controller
             this.iReglaService = _iReglaService;
         }
 
-        public ReglaVO Create(int _ReglaId, string _nombre)
+        public ReglaVO Create( string _nombre)
         {
-            return this.iReglaService.Create(_ReglaId, _nombre);
+            return this.iReglaService.Create( _nombre);
         }
         public ReglaVO Delete(int _ReglaId)
         {

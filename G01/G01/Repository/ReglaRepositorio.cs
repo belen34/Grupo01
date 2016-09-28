@@ -23,7 +23,7 @@ namespace G01.Repository
             }
             return r;
         }
-        public ReglaObj Create(int reglaId, string _nombre)
+        public ReglaObj Create( string _nombre)
         {
             ReglaObj r = new ReglaObj();
             r.reglaId = 0;

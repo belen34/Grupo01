@@ -12,6 +12,7 @@ namespace G01.ObjectVO
 
         public int condicionId { get; set; }
         public int operadorcomparacionId { get; set; }
+        public int reglaId { get; set; }
         public int operadorLogico1Id { get; set; }
         public int operadorLogico2Id { get; set; }
         public string texto1 { get; set; }
@@ -20,16 +21,18 @@ namespace G01.ObjectVO
         public virtual OperadorComparacionObj OperadorComparacionObj { get; set; }
         public virtual OperadorLogicoObj OperadorLogicoObj1 { get; set; }
         public virtual OperadorLogicoObj OperadorLogicoObj2 { get; set; }
+        public virtual ReglaObj ReglaObj { get; set; }
 
         public CondicionVO()
         {
 
         }
 
-        public CondicionVO(int _condicionId, int _operadorcomparacionId, int _operadorLogico1, int _operadorLogico2, string _texto1, string _texto2)
+        public CondicionVO(int _condicionId,int _reglaId, int _operadorcomparacionId, int _operadorLogico1, int _operadorLogico2, string _texto1, string _texto2)
         {
             this.condicionId = _condicionId;
             this.operadorcomparacionId = _operadorcomparacionId;
+            this.reglaId = _reglaId;
             this.operadorLogico1Id = _operadorLogico1;
             this.operadorLogico2Id = _operadorLogico2;
             this.texto1 = _texto1;

@@ -17,9 +17,9 @@ namespace G01.Controller
             this.iCondicionService = _iCondicionService;
         }
 
-        public CondicionVO Create(int _operadorComparacionId, int _operadorLogico1, int _operadorLogico2, string _texto1, string _texto2)
+        public CondicionVO Create(int _operadorComparacionId,int _reglaId, int _operadorLogico1, int _operadorLogico2, string _texto1, string _texto2)
         {
-            return this.iCondicionService.Create(_operadorComparacionId, _operadorLogico1, _operadorLogico2, _texto1, _texto2);
+            return this.iCondicionService.Create(_operadorComparacionId, _reglaId, _operadorLogico1, _operadorLogico2, _texto1, _texto2);
         }
         public CondicionVO Delete(int _CondicionId)
         {

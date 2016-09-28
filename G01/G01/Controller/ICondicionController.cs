@@ -9,7 +9,7 @@ namespace G01.Controller
 {
     public interface ICondicionController
     {
-        CondicionVO Create(int operadorComparacionId, int operadorLogico1, int operadorLogico2, string texto1, string texto2);
+        CondicionVO Create(int operadorComparacionId,int reglaId, int operadorLogico1, int operadorLogico2, string texto1, string texto2);
         CondicionVO Delete(int _CondicionId);
         CondicionVO Give(int _CondicionId);
         List<CondicionVO> ListCondiciones();

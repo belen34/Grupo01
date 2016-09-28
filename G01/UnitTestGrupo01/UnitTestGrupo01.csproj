@@ -85,6 +85,7 @@
   <ItemGroup>
     <Compile Include="OperadorComparacionTest.cs" />
     <Compile Include="OperadorLogicoTest.cs" />
+    <Compile Include="ReglaTest.cs" />
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -36,43 +36,39 @@ namespace UnitTestGrupo01
         [TestMethod]
         public void ReglaTest_GiveRegla()
         {
-            ReglaVO r = this.iReglaController.Create(1, "juan", "jonatan");
+            ReglaVO r = this.iReglaController.Create(1, "superior");
 
             ReglaVO res = this.iReglaController.Give(r.reglaId);
             Assert.AreEqual(res.reglaId, r.reglaId);
-            Assert.AreEqual(res.operadorcomparacionId, r.operadorcomparacionId);
-            Assert.AreEqual(res.texto1, r.texto1);
-            Assert.AreEqual(res.texto2, r.texto2);
+            Assert.AreEqual(res.nombre, r.nombre);
 
         }
         [TestMethod]
         public void ReglaTest_CrearRegla()
         {
-            ReglaVO r = this.iReglaController.Create(2, "rojo", "verde");
-            Assert.AreEqual(2, r.operadorcomparacionId);
+            ReglaVO r = this.iReglaController.Create(2,"inferior");
+            Assert.AreEqual(2, r.reglaId);
 
         }
         [TestMethod]
         public void ReglaTest_UpdateRegla()
         {
-            ReglaVO r = this.iReglaController.Create(3, "azul", "amarillo");
-            r.operadorcomparacionId = 5;
+            ReglaVO r = this.iReglaController.Create(3, "igual");
+            r.nombre = "igualdad";
             ReglaVO sUpdate = this.iReglaController.UpDate(r);
-            Assert.AreEqual(sUpdate.operadorcomparacionId, r.operadorcomparacionId);
+            Assert.AreEqual(sUpdate.nombre, r.nombre);
             using (var MotorReglasDB = new MotorReglasDB())
             {
-                Assert.AreEqual(MotorReglasDB.Reglas.Find(r.reglaId).operadorcomparacionId, r.operadorcomparacionId);
+                Assert.AreEqual(MotorReglasDB.Reglas.Find(r.reglaId).nombre, r.nombre);
             }
         }
         [TestMethod]
         public void ReglaTest_DeleteRegla()
         {
-            ReglaVO r = this.iReglaController.Create(4, "negro", "blanco");
+            ReglaVO r = this.iReglaController.Create(4, "distinto");
             ReglaVO sDelete = this.iReglaController.Delete(r.reglaId);
             Assert.AreEqual(sDelete.reglaId, r.reglaId);
-            Assert.AreEqual(sDelete.operadorcomparacionId, r.operadorcomparacionId);
-            Assert.AreEqual(sDelete.texto1, r.texto1);
-            Assert.AreEqual(sDelete.texto2, r.texto2);
+            Assert.AreEqual(sDelete.nombre, r.nombre);
 
         }
         [TestMethod]

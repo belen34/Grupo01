@@ -23,11 +23,12 @@ namespace G01.Repository
             }
             return r;
         }
-        public CondicionObj Create(int _operadorComparacionId, int _operadorLogico1, int _operadorLogico2, string _texto1, string _texto2)
+        public CondicionObj Create(int _operadorComparacionId,int _reglaId, int _operadorLogico1, int _operadorLogico2, string _texto1, string _texto2)
         {
             CondicionObj r = new CondicionObj();
             r.condicionId = 0;
             r.operadorcomparacionId = _operadorComparacionId;
+            r.reglaId = _reglaId;
             r.operadorLogico1Id = _operadorLogico1;
             r.operadorLogico2Id = _operadorLogico2;
             r.texto1 = _texto1;

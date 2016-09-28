@@ -15,6 +15,7 @@ namespace G01.Util
             CondicionObj res = new CondicionObj();
             res.condicionId = _condicion.condicionId;
             res.operadorcomparacionId = _condicion.operadorcomparacionId;
+            res.reglaId = _condicion.reglaId;
             res.operadorLogico1Id = _condicion.operadorLogico1Id;
             res.operadorLogico2Id = _condicion.operadorLogico2Id;
             res.texto1 = _condicion.texto1;
@@ -30,6 +31,7 @@ namespace G01.Util
             CondicionVO res = new CondicionVO();
             res.condicionId = _condicion.condicionId;
             res.operadorcomparacionId = _condicion.operadorcomparacionId;
+            res.reglaId = _condicion.reglaId;
             res.operadorLogico1Id = _condicion.operadorLogico1Id;
             res.operadorLogico2Id = _condicion.operadorLogico2Id;
             res.texto1 = _condicion.texto1;

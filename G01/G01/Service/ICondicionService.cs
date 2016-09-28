@@ -9,7 +9,7 @@ namespace G01.Service
 {
     public interface ICondicionService
     {
-        CondicionVO Create(int operadorComparacionId, int _operadorLogico1, int _operadorLogico2, string texto1, string texto2);
+        CondicionVO Create(int operadorComparacionId,int reglaId, int _operadorLogico1, int _operadorLogico2, string texto1, string texto2);
         CondicionVO Delete(int _CondicionId);
         CondicionVO Give(int _CondicionId);
         List<CondicionVO> ListCondiciones();

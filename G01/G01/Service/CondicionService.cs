@@ -21,9 +21,9 @@ namespace G01.Service
             this.iCondicionUtil = _iCondicionUtil;
         }
 
-        public CondicionVO Create(int _operadorComparacionId, int _operadorLogico1, int _operadorLogico2, string _texto1, string _texto2)
+        public CondicionVO Create(int _operadorComparacionId,int _reglaId, int _operadorLogico1, int _operadorLogico2, string _texto1, string _texto2)
         {
-            CondicionObj r = this.iCondicionServiceRepository.Create(_operadorComparacionId,_operadorLogico1, _operadorLogico2, _texto1, _texto2);
+            CondicionObj r = this.iCondicionServiceRepository.Create(_operadorComparacionId,_reglaId,_operadorLogico1, _operadorLogico2, _texto1, _texto2);
             return this.iCondicionUtil.ConviertEntityToVO(r);
         }
         public CondicionVO Delete(int _CondicionId)

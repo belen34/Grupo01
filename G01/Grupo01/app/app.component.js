@@ -12,12 +12,12 @@ var core_1 = require('@angular/core');
 //import { ROUTER_DIRECTIVES } from '@angular/router';
 var AppComponent = (function () {
     function AppComponent() {
-        this.title = 'Motor de Reglas';
+        this.title = 'Motor de condiciones';
     }
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: "\n  <h1>{{title}}</h1>\n  <nav>\n   <a id= \"dashboard\" [routerLink]=\"['/dashboard']\" routerLinkActive=\"active\">Dashboard</a>\n   <a id= \"logicos\" [routerLink]=\"['/logicos']\" routerLinkActive=\"active\">Operadores logicos</a>\n   <a id= \"logicos\" [routerLink]=\"['/reglas']\" routerLinkActive=\"active\">Reglas</a>\n  </nav>\n  <router-outlet></router-outlet>\n  ",
+            template: "\n  <h1>{{title}}</h1>\n  <nav>\n   <a id= \"dashboard\" [routerLink]=\"['/dashboard']\" routerLinkActive=\"active\">Dashboard</a>\n   <a id= \"logicos\" [routerLink]=\"['/logicos']\" routerLinkActive=\"active\">Operadores logicos</a>\n   <a id= \"condiciones\" [routerLink]=\"['/condiciones']\" routerLinkActive=\"active\">condiciones</a>\n  </nav>\n  <router-outlet></router-outlet>\n  ",
             styleUrls: ['./app/logicos.component.css'],
         }), 
         __metadata('design:paramtypes', [])

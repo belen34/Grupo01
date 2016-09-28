@@ -1,14 +1,14 @@
 ﻿
 import { OperadorComparacion } from './operadorcomparacion';
 
-export class Regla {
-    reglaId: number;
+export class Condicion {
+    CondicionId: number;
     operadorcomparacionId: number;
     texto1: string;
     texto2: string;
     OperadorComparacionObj: OperadorComparacion;
-    constructor(reglaId: number, operadorcomparacionId: number, texto1: string, texto2: string) {
-        this.reglaId = reglaId;
+    constructor(CondicionId: number, operadorcomparacionId: number, texto1: string, texto2: string) {
+        this.CondicionId = CondicionId;
         this.operadorcomparacionId = operadorcomparacionId;
         this.texto1 = texto1;
         this.texto2 = texto2;

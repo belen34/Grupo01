@@ -8,61 +8,61 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var regla_1 = require('./regla');
+var Condicion_1 = require('./Condicion');
 var core_1 = require('@angular/core');
 var http_1 = require('@angular/http');
 require('rxjs/add/operator/toPromise');
 require('rxjs/add/operator/map');
-var ReglaService = (function () {
-    function ReglaService(http) {
+var CondicionService = (function () {
+    function CondicionService(http) {
         this.http = http;
         //maximo: number = 4;
         this.headers = new http_1.Headers({ 'Content-Type': 'application/json' });
         this.headers2 = new http_1.Headers({ 'Accept': 'application/json' });
-        this.reglasUrl = '/api/Reglas'; // URL to web api
+        this.CondicionsUrl = '/api/Reglas'; // URL to web api
     }
-    ReglaService.prototype.getReglas = function () {
-        return this.http.get(this.reglasUrl, { headers: this.headers2 })
+    CondicionService.prototype.getCondicions = function () {
+        return this.http.get(this.CondicionsUrl, { headers: this.headers2 })
             .toPromise()
             .then(function (response) { return response.json(); })
             .catch(this.handleError);
     };
-    ReglaService.prototype.getRegla = function (reglaId) {
-        return this.getReglas()
-            .then(function (reglas) { return reglas.find(function (regla) { return regla.reglaId === reglaId; }); });
+    CondicionService.prototype.getCondicion = function (CondicionId) {
+        return this.getCondicions()
+            .then(function (Condicions) { return Condicions.find(function (Condicion) { return Condicion.CondicionId === CondicionId; }); });
     };
-    ReglaService.prototype.delete = function (index) {
-        var url = this.reglasUrl + "/" + index;
+    CondicionService.prototype.delete = function (index) {
+        var url = this.CondicionsUrl + "/" + index;
         return this.http.delete(url, { headers: this.headers })
             .toPromise()
             .then(function () { return null; })
             .catch(this.handleError);
     };
-    ReglaService.prototype.addregla = function (operadorId, t1, t2) {
-        var p = new regla_1.Regla(0, operadorId, t1, t2);
+    CondicionService.prototype.addCondicion = function (operadorId, t1, t2) {
+        var p = new Condicion_1.Condicion(0, operadorId, t1, t2);
         return this.http
-            .post(this.reglasUrl, JSON.stringify(p), { headers: this.headers })
+            .post(this.CondicionsUrl, JSON.stringify(p), { headers: this.headers })
             .toPromise()
             .then(function (res) { return res.json(); })
             .catch(this.handleError);
     };
-    ReglaService.prototype.updateregla = function (regla) {
-        var url = this.reglasUrl + "/" + regla.reglaId;
+    CondicionService.prototype.updateCondicion = function (Condicion) {
+        var url = this.CondicionsUrl + "/" + Condicion.CondicionId;
         return this.http
-            .put(url, JSON.stringify(regla), { headers: this.headers })
+            .put(url, JSON.stringify(Condicion), { headers: this.headers })
             .toPromise()
-            .then(function () { return regla; })
+            .then(function () { return Condicion; })
             .catch(this.handleError);
     };
-    ReglaService.prototype.handleError = function (error) {
+    CondicionService.prototype.handleError = function (error) {
         console.error('Un error ha ocurrido', error);
         return Promise.reject(error.message || error);
     };
-    ReglaService = __decorate([
+    CondicionService = __decorate([
         core_1.Injectable(), 
         __metadata('design:paramtypes', [http_1.Http])
-    ], ReglaService);
-    return ReglaService;
+    ], CondicionService);
+    return CondicionService;
 }());
-exports.ReglaService = ReglaService;
-//# sourceMappingURL=regla.service.js.map
+exports.CondicionService = CondicionService;
+//# sourceMappingURL=Condicion.service.js.map

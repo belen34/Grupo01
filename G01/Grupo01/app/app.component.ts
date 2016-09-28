@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
   <nav>
    <a id= "dashboard" [routerLink]="['/dashboard']" routerLinkActive="active">Dashboard</a>
    <a id= "logicos" [routerLink]="['/logicos']" routerLinkActive="active">Operadores logicos</a>
-   <a id= "logicos" [routerLink]="['/reglas']" routerLinkActive="active">Reglas</a>
+   <a id= "condiciones" [routerLink]="['/condiciones']" routerLinkActive="active">condiciones</a>
   </nav>
   <router-outlet></router-outlet>
   `,
@@ -17,5 +17,5 @@ import { Component } from '@angular/core';
    
 })
 export class AppComponent {
-    title = 'Motor de Reglas';
+    title = 'Motor de condiciones';
 }

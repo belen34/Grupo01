@@ -145,10 +145,10 @@
     <Content Include="app\logico.detail.component.html" />
     <Content Include="app\logicos.component.html" />
     <Content Include="app\logicos.component.css" />
-    <Content Include="app\regla.add.component.html" />
-    <Content Include="app\regla.delete.component.html" />
-    <Content Include="app\regla.detail.component.html" />
-    <Content Include="app\reglas.component.html" />
+    <Content Include="app\Condicion.add.component.html" />
+    <Content Include="app\Condicion.delete.component.html" />
+    <Content Include="app\Condicion.detail.component.html" />
+    <Content Include="app\Condicions.component.html" />
     <Content Include="Global.asax" />
     <Content Include="index.html" />
     <Content Include="scripts\ai.0.22.19-build00125.js" />
@@ -164,7 +164,7 @@
     <Compile Include="Controllers\IReglasController.cs" />
     <Compile Include="Controllers\operadorcomparacionsController.cs" />
     <Compile Include="Controllers\OperardorLogicosController.cs" />
-    <Compile Include="Controllers\ReglasController.cs" />
+    <Compile Include="Controllers\CondicionsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -220,12 +220,12 @@
     <TypeScriptCompile Include="app\main.ts" />
     <TypeScriptCompile Include="app\operadorcomparacion.service.ts" />
     <TypeScriptCompile Include="app\operadorcomparacion.ts" />
-    <TypeScriptCompile Include="app\regla.service.ts" />
-    <TypeScriptCompile Include="app\regla.ts" />
-    <TypeScriptCompile Include="app\reglas.add.component.ts" />
-    <TypeScriptCompile Include="app\reglas.component.ts" />
-    <TypeScriptCompile Include="app\reglas.delete.component.ts" />
-    <TypeScriptCompile Include="app\reglas.detail.component.ts" />
+    <TypeScriptCompile Include="app\Condicion.service.ts" />
+    <TypeScriptCompile Include="app\condicion.ts" />
+    <TypeScriptCompile Include="app\Condicions.add.component.ts" />
+    <TypeScriptCompile Include="app\Condicions.component.ts" />
+    <TypeScriptCompile Include="app\Condicions.delete.component.ts" />
+    <TypeScriptCompile Include="app\Condicions.detail.component.ts" />
     <TypeScriptCompile Include="app\rxjs-extensions.ts" />
     <TypeScriptCompile Include="typings\globals\angular-protractor\index.d.ts" />
     <TypeScriptCompile Include="typings\globals\core-js\index.d.ts" />

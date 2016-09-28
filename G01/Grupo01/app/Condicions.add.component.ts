@@ -1,28 +1,28 @@
 ﻿import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 
-import { Regla } from './regla';
+import { Condicion } from './Condicion';
 
 import { OperadorComparacion } from './operadorcomparacion';
-import { ReglaService } from './regla.service';
+import { CondicionService } from './Condicion.service';
 
 import { OperadorComparacionService } from './operadorcomparacion.service';
 
 @Component({
-    selector: 'my-regla-detail',
-    templateUrl: './app/regla.add.component.html',
+    selector: 'my-Condicion-detail',
+    templateUrl: './app/Condicion.add.component.html',
     styleUrls: ['./app/logicos.component.css'],
 
 })
-export class ReglasAddComponent implements OnInit {
-    regla: Regla;
-    reglas: Regla[];
-    selectedregla: Regla;
+export class CondicionsAddComponent implements OnInit {
+    Condicion: Condicion;
+    Condicions: Condicion[];
+    selectedCondicion: Condicion;
 
     operadors: OperadorComparacion[];
     sub: any;
     constructor(
-        private reglaService: ReglaService,
+        private CondicionService: CondicionService,
         private route: ActivatedRoute,
         private operadorcomparacionService: OperadorComparacionService
     ) { }
@@ -36,9 +36,9 @@ export class ReglasAddComponent implements OnInit {
      
         this.getoperadorcomparacions();
     }
-    addregla(operadorId: number, t1: string, t2: string) {
+    addCondicion(operadorId: number, t1: string, t2: string) {
 
-        this.reglaService.addregla(operadorId, t1, t2);
+        this.CondicionService.addCondicion(operadorId, t1, t2);
 
     }
   

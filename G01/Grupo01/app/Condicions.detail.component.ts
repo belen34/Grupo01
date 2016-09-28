@@ -1,35 +1,35 @@
 ﻿import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 
-import { Regla } from './regla';
-import { ReglaService } from './regla.service';
+import { Condicion } from './Condicion';
+import { CondicionService } from './Condicion.service';
 
 import { OperadorComparacion } from './operadorcomparacion';
 
 import { OperadorComparacionService } from './operadorcomparacion.service';
 
 @Component({
-    selector: 'my-regla-detail',
-    templateUrl: './app/regla.detail.component.html',
+    selector: 'my-Condicion-detail',
+    templateUrl: './app/Condicion.detail.component.html',
     styleUrls: ['./app/logicos.component.css'],
 
 })
-export class ReglasDetailComponent implements OnInit {
-    regla: Regla;
+export class CondicionsDetailComponent implements OnInit {
+    Condicion: Condicion;
    
     operadorcomporacions: OperadorComparacion[];
     sub: any;
-    constructor(private reglaService: ReglaService,
+    constructor(private CondicionService: CondicionService,
         private route: ActivatedRoute,
        
         private operadorcomporacionService: OperadorComparacionService) { }
     ngOnInit() {
         this.sub = this.route.params.subscribe(params => {
             let id = +params['id'];
-            this.reglaService.getRegla(id)
-                .then(regla => this.regla = regla);
+            this.CondicionService.getCondicion(id)
+                .then(Condicion => this.Condicion = Condicion);
         });
-      
+        console.log("Condicion en el detail", this.Condicion);
         this.getoperadorcomporacions();
     }
 
@@ -45,7 +45,7 @@ export class ReglasDetailComponent implements OnInit {
         window.history.back();
     }
     save(): void {
-        this.reglaService.updateregla(this.regla)
+        this.CondicionService.updateCondicion(this.Condicion)
             .then(this.goBack);
     }
 }

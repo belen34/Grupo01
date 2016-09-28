@@ -1,24 +1,24 @@
 ﻿import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
-import { Regla } from './regla';
-import { ReglaService } from './regla.service';
+import { Condicion } from './Condicion';
+import { CondicionService } from './Condicion.service';
 
 @Component({
-    selector: 'my-regla-delete',
-    templateUrl: './app/regla.delete.component.html',
+    selector: 'my-Condicion-delete',
+    templateUrl: './app/Condicion.delete.component.html',
     styleUrls: ['./app/logicos.component.css'],
 })
 
-export class ReglasDeleteComponent implements OnInit, OnDestroy {
-    regla: Regla;
+export class CondicionsDeleteComponent implements OnInit, OnDestroy {
+    Condicion: Condicion;
     sub: any;
-    constructor(private reglaService: ReglaService,
+    constructor(private CondicionService: CondicionService,
         private route: ActivatedRoute) { }
     ngOnInit() {
         this.sub = this.route.params.subscribe(params => {
             let id = +params['id'];
-            this.reglaService.delete(id);
+            this.CondicionService.delete(id);
         });
     }
     ngOnDestroy() {

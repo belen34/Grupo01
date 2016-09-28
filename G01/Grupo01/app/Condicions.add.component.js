@@ -10,37 +10,37 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var router_1 = require('@angular/router');
-var regla_service_1 = require('./regla.service');
+var Condicion_service_1 = require('./Condicion.service');
 var operadorcomparacion_service_1 = require('./operadorcomparacion.service');
-var ReglasAddComponent = (function () {
-    function ReglasAddComponent(reglaService, route, operadorcomparacionService) {
-        this.reglaService = reglaService;
+var CondicionsAddComponent = (function () {
+    function CondicionsAddComponent(CondicionService, route, operadorcomparacionService) {
+        this.CondicionService = CondicionService;
         this.route = route;
         this.operadorcomparacionService = operadorcomparacionService;
     }
-    ReglasAddComponent.prototype.getoperadorcomparacions = function () {
+    CondicionsAddComponent.prototype.getoperadorcomparacions = function () {
         var _this = this;
         this.operadorcomparacionService.getoperadorcomparacions().then(function (operador) { return _this.operadors
             = operador; });
     };
-    ReglasAddComponent.prototype.ngOnInit = function () {
+    CondicionsAddComponent.prototype.ngOnInit = function () {
         this.getoperadorcomparacions();
     };
-    ReglasAddComponent.prototype.addregla = function (operadorId, t1, t2) {
-        this.reglaService.addregla(operadorId, t1, t2);
+    CondicionsAddComponent.prototype.addCondicion = function (operadorId, t1, t2) {
+        this.CondicionService.addCondicion(operadorId, t1, t2);
     };
-    ReglasAddComponent.prototype.goBack = function () {
+    CondicionsAddComponent.prototype.goBack = function () {
         window.history.back();
     };
-    ReglasAddComponent = __decorate([
+    CondicionsAddComponent = __decorate([
         core_1.Component({
-            selector: 'my-regla-detail',
-            templateUrl: './app/regla.add.component.html',
+            selector: 'my-Condicion-detail',
+            templateUrl: './app/Condicion.add.component.html',
             styleUrls: ['./app/logicos.component.css'],
         }), 
-        __metadata('design:paramtypes', [regla_service_1.ReglaService, router_1.ActivatedRoute, operadorcomparacion_service_1.OperadorComparacionService])
-    ], ReglasAddComponent);
-    return ReglasAddComponent;
+        __metadata('design:paramtypes', [Condicion_service_1.CondicionService, router_1.ActivatedRoute, operadorcomparacion_service_1.OperadorComparacionService])
+    ], CondicionsAddComponent);
+    return CondicionsAddComponent;
 }());
-exports.ReglasAddComponent = ReglasAddComponent;
-//# sourceMappingURL=reglas.add.component.js.map
+exports.CondicionsAddComponent = CondicionsAddComponent;
+//# sourceMappingURL=Condicions.add.component.js.map

@@ -10,47 +10,48 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var router_1 = require('@angular/router');
-var regla_service_1 = require('./regla.service');
+var Condicion_service_1 = require('./Condicion.service');
 var operadorcomparacion_service_1 = require('./operadorcomparacion.service');
-var ReglasDetailComponent = (function () {
-    function ReglasDetailComponent(reglaService, route, operadorcomporacionService) {
-        this.reglaService = reglaService;
+var CondicionsDetailComponent = (function () {
+    function CondicionsDetailComponent(CondicionService, route, operadorcomporacionService) {
+        this.CondicionService = CondicionService;
         this.route = route;
         this.operadorcomporacionService = operadorcomporacionService;
     }
-    ReglasDetailComponent.prototype.ngOnInit = function () {
+    CondicionsDetailComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.sub = this.route.params.subscribe(function (params) {
             var id = +params['id'];
-            _this.reglaService.getRegla(id)
-                .then(function (regla) { return _this.regla = regla; });
+            _this.CondicionService.getCondicion(id)
+                .then(function (Condicion) { return _this.Condicion = Condicion; });
         });
+        console.log("Condicion en el detail", this.Condicion);
         this.getoperadorcomporacions();
     };
-    ReglasDetailComponent.prototype.getoperadorcomporacions = function () {
+    CondicionsDetailComponent.prototype.getoperadorcomporacions = function () {
         var _this = this;
         this.operadorcomporacionService.getoperadorcomparacions().then(function (operadorcomporacions) { return _this.operadorcomporacions
             = operadorcomporacions; });
     };
-    ReglasDetailComponent.prototype.ngOnDestroy = function () {
+    CondicionsDetailComponent.prototype.ngOnDestroy = function () {
         this.sub.unsubscribe();
     };
-    ReglasDetailComponent.prototype.goBack = function () {
+    CondicionsDetailComponent.prototype.goBack = function () {
         window.history.back();
     };
-    ReglasDetailComponent.prototype.save = function () {
-        this.reglaService.updateregla(this.regla)
+    CondicionsDetailComponent.prototype.save = function () {
+        this.CondicionService.updateCondicion(this.Condicion)
             .then(this.goBack);
     };
-    ReglasDetailComponent = __decorate([
+    CondicionsDetailComponent = __decorate([
         core_1.Component({
-            selector: 'my-regla-detail',
-            templateUrl: './app/regla.detail.component.html',
+            selector: 'my-Condicion-detail',
+            templateUrl: './app/Condicion.detail.component.html',
             styleUrls: ['./app/logicos.component.css'],
         }), 
-        __metadata('design:paramtypes', [regla_service_1.ReglaService, router_1.ActivatedRoute, operadorcomparacion_service_1.OperadorComparacionService])
-    ], ReglasDetailComponent);
-    return ReglasDetailComponent;
+        __metadata('design:paramtypes', [Condicion_service_1.CondicionService, router_1.ActivatedRoute, operadorcomparacion_service_1.OperadorComparacionService])
+    ], CondicionsDetailComponent);
+    return CondicionsDetailComponent;
 }());
-exports.ReglasDetailComponent = ReglasDetailComponent;
-//# sourceMappingURL=reglas.detail.component.js.map
+exports.CondicionsDetailComponent = CondicionsDetailComponent;
+//# sourceMappingURL=Condicions.detail.component.js.map

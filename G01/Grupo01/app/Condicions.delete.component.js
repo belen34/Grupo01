@@ -10,34 +10,34 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var router_1 = require('@angular/router');
-var regla_service_1 = require('./regla.service');
-var ReglasDeleteComponent = (function () {
-    function ReglasDeleteComponent(reglaService, route) {
-        this.reglaService = reglaService;
+var Condicion_service_1 = require('./Condicion.service');
+var CondicionsDeleteComponent = (function () {
+    function CondicionsDeleteComponent(CondicionService, route) {
+        this.CondicionService = CondicionService;
         this.route = route;
     }
-    ReglasDeleteComponent.prototype.ngOnInit = function () {
+    CondicionsDeleteComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.sub = this.route.params.subscribe(function (params) {
             var id = +params['id'];
-            _this.reglaService.delete(id);
+            _this.CondicionService.delete(id);
         });
     };
-    ReglasDeleteComponent.prototype.ngOnDestroy = function () {
+    CondicionsDeleteComponent.prototype.ngOnDestroy = function () {
         this.sub.unsubscribe();
     };
-    ReglasDeleteComponent.prototype.goBack = function () {
+    CondicionsDeleteComponent.prototype.goBack = function () {
         window.history.back();
     };
-    ReglasDeleteComponent = __decorate([
+    CondicionsDeleteComponent = __decorate([
         core_1.Component({
-            selector: 'my-regla-delete',
-            templateUrl: './app/regla.delete.component.html',
+            selector: 'my-Condicion-delete',
+            templateUrl: './app/Condicion.delete.component.html',
             styleUrls: ['./app/logicos.component.css'],
         }), 
-        __metadata('design:paramtypes', [regla_service_1.ReglaService, router_1.ActivatedRoute])
-    ], ReglasDeleteComponent);
-    return ReglasDeleteComponent;
+        __metadata('design:paramtypes', [Condicion_service_1.CondicionService, router_1.ActivatedRoute])
+    ], CondicionsDeleteComponent);
+    return CondicionsDeleteComponent;
 }());
-exports.ReglasDeleteComponent = ReglasDeleteComponent;
-//# sourceMappingURL=reglas.delete.component.js.map
+exports.CondicionsDeleteComponent = CondicionsDeleteComponent;
+//# sourceMappingURL=Condicions.delete.component.js.map

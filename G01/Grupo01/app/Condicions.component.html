@@ -1,0 +1,37 @@
+﻿<h2 id="CondicionsStorege"> Condicions almacenadas </h2>
+<div *ngIf="Condicions != undefined">
+    <a id="add" [routerLink]="['/addCondicion']" routerLinkActive="active">Añadir una Condicion</a>
+    <table id="Condicions">
+
+        <thead>
+            <tr>
+                <th>Operando 1</th>
+                <th>Operador</th>
+                <th>Operando 2</th>
+            </tr>
+        </thead>
+
+        <tr *ngFor="let Condicion of Condicions" [class.selected]="Condicion === selectedCondicion"
+            (click)="onSelect(Condicion)">
+            <td>{{Condicion.texto1 }}</td>
+            <td> {{Condicion.OperadorComparacionObj.name }} </td>
+            <td> {{Condicion.texto2 }}  </td>
+        </tr>
+    </table>
+    <div *ngIf="selectedCondicion">
+        <h2 id="MessageDetail">
+            Condicion seleccionada:
+            Operando 1: {{selectedCondicion.texto1 }}
+            Operador: {{selectedCondicion.OperadorComparacionObj.name }}
+            Operando 2:  {{selectedCondicion.texto2 }}
+        </h2>
+        <button id="edit" (click)="gotoDetail(selectedCondicion)">Editar Condicion</button>
+        <button id="delete"
+                (click)="delete(selectedCondicion); $event.stopPropagation()">
+            Borrar Condicion
+        </button>
+    </div>
+</div>
+<div *ngIf="Condicions == undefined">
+    <h2>Cargando....</h2>
+</div>

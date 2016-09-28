@@ -9,7 +9,7 @@ namespace G01.Repository
 {
     public interface IReglaRepository
     {
-        ReglaObj Create(int operadorComparacionId, string texto1, string texto2);
+        ReglaObj Create(int reglaId, string nombre);
         ReglaObj Delete(int ReglaId);
         ReglaObj Give(int _ReglaId);
         ICollection<ReglaObj> ListReglas();

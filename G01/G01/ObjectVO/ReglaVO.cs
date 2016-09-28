@@ -11,23 +11,18 @@ namespace G01.ObjectVO
     {
 
         public int reglaId { get; set; }
-        public int operadorcomparacionId { get; set; }
-        public string texto1 { get; set; }
-        public string texto2 { get; set; }
+        public string nombre { get; set; }
 
-        public virtual OperadorComparacionObj OperadorComparacionObj { get; set; }
 
         public ReglaVO()
         {
 
         }
 
-        public ReglaVO(int _reglaId, int _operadorcomparacionId, string _texto1, string _texto2)
+        public ReglaVO(int _reglaId, string _nombre)
         {
             this.reglaId = _reglaId;
-            this.operadorcomparacionId = _operadorcomparacionId;
-            this.texto1 = _texto1;
-            this.texto2 = _texto2;
+            this.nombre = _nombre;
         }
 
     }

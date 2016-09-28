@@ -63,35 +63,45 @@
   <ItemGroup>
     <Compile Include="Controller\IOperadorComparacionController.cs" />
     <Compile Include="Controller\IOperadorLogicoController.cs" />
+    <Compile Include="Controller\ICondicionController.cs" />
     <Compile Include="Controller\IReglaController.cs" />
     <Compile Include="Controller\OperadorComparacionController.cs" />
     <Compile Include="Controller\OperadorLogicoController.cs" />
+    <Compile Include="Controller\CondicionController.cs" />
     <Compile Include="Controller\ReglaController.cs" />
     <Compile Include="MotorReglasDB.cs" />
     <Compile Include="ObjectVO\OperadorComparacionVO.cs" />
     <Compile Include="ObjectVO\OperadorLogicoVO.cs" />
+    <Compile Include="ObjectVO\CondicionVO.cs" />
     <Compile Include="ObjectVO\ReglaVO.cs" />
     <Compile Include="Object\OperadorComparacionObj.cs" />
     <Compile Include="Object\OperadorLogicoObj.cs" />
+    <Compile Include="Object\CondicionObj.cs" />
     <Compile Include="Object\ReglaObj.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\IOperadorComparacionRepository.cs" />
     <Compile Include="Repository\IOperadorLogicoRepository.cs" />
+    <Compile Include="Repository\ICondicionRepository.cs" />
     <Compile Include="Repository\IReglaRepository.cs" />
     <Compile Include="Repository\OperadorComparacionRepository.cs" />
     <Compile Include="Repository\OperadorLogicoRepository.cs" />
+    <Compile Include="Repository\CondicionRepositorio.cs" />
     <Compile Include="Repository\ReglaRepositorio.cs" />
     <Compile Include="Service\IOperadorComparacionService.cs" />
     <Compile Include="Service\IOperadorLogicoService.cs" />
+    <Compile Include="Service\ICondicionService.cs" />
     <Compile Include="Service\IReglaService.cs" />
     <Compile Include="Service\OperadorComparacionService.cs" />
     <Compile Include="Service\OperadorLogicoService.cs" />
+    <Compile Include="Service\CondicionService.cs" />
     <Compile Include="Service\ReglaService.cs" />
     <Compile Include="Util\IOperadorComparacionUtil.cs" />
     <Compile Include="Util\IOperadorLogicoUtil.cs" />
+    <Compile Include="Util\ICondicionUtil.cs" />
     <Compile Include="Util\IReglaUtil.cs" />
     <Compile Include="Util\OperadorComparacionUtil.cs" />
     <Compile Include="Util\OperadorLogicoUtil.cs" />
+    <Compile Include="Util\CondicionUtil.cs" />
     <Compile Include="Util\ReglaUtil.cs" />
   </ItemGroup>
   <ItemGroup>

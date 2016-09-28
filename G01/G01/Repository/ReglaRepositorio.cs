@@ -17,20 +17,17 @@ namespace G01.Repository
             {
                // r = MotorReglasDB.Reglas.Find(_Regla);
                 r = MotorReglasDB.Reglas
-                   .Include(v2 => v2.OperadorComparacionObj)
+                   //.Include(v2 => v2.OperadorComparacionObj)
                    .Where(v3 => v3.reglaId == _ReglaId)
                    .FirstOrDefault();
             }
             return r;
         }
-        public ReglaObj Create(int operadorComparacionId, string _texto1, string _texto2)
+        public ReglaObj Create(int reglaId, string _nombre)
         {
             ReglaObj r = new ReglaObj();
             r.reglaId = 0;
-            r.operadorcomparacionId = operadorComparacionId;
-            r.texto1 = _texto1;
-            r.texto2 = _texto2;
-            r.OperadorComparacionObj = null;
+            r.nombre = _nombre;
             using (var MotorReglasDB = new MotorReglasDB())
             {
                 r = MotorReglasDB.Reglas.Add(r);
@@ -71,7 +68,7 @@ namespace G01.Repository
         {
             using (var MotorReglasDB = new MotorReglasDB())
             {
-                return MotorReglasDB.Reglas.Include("OperadorComparacionObj").ToList();
+                return MotorReglasDB.Reglas.ToList();
             }
         }
     }

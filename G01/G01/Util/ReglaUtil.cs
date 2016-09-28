@@ -14,21 +14,14 @@ namespace G01.Util
         {
             ReglaObj res = new ReglaObj();
             res.reglaId = _regla.reglaId;
-            res.operadorcomparacionId = _regla.operadorcomparacionId;
-            res.texto1 = _regla.texto1;
-            res.texto2 = _regla.texto2;
-            res.OperadorComparacionObj = _regla.OperadorComparacionObj;
-
+            res.nombre = _regla.nombre;
             return res;
         }
         public ReglaVO ConviertEntityToVO(ReglaObj _regla)
         {
             ReglaVO res = new ReglaVO();
             res.reglaId = _regla.reglaId;
-            res.operadorcomparacionId = _regla.operadorcomparacionId;
-            res.texto1 = _regla.texto1;
-            res.texto2 = _regla.texto2;
-            res.OperadorComparacionObj = _regla.OperadorComparacionObj;
+            res.nombre = _regla.nombre;
             return res;
         }
 

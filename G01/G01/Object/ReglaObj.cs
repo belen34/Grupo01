@@ -13,25 +13,17 @@ namespace G01.Object
     {
         [Key]
         public int reglaId { get; set; }
-        public int operadorcomparacionId { get; set; }
-        public string texto1 { get; set; }
-        public string texto2 { get; set; }
-
-        [ForeignKey("operadorcomparacionId")]
-        public virtual OperadorComparacionObj OperadorComparacionObj { get; set; }
-
+        public string nombre{ get; set; }
 
         public ReglaObj()
         {
 
         }
 
-        public ReglaObj(int _reglaId, int _operadorcomparacionId, string _texto1, string _texto2)
+        public ReglaObj(int _reglaId, int _operadorcomparacionId, string _nombre)
         {
             this.reglaId = _reglaId;
-            this.operadorcomparacionId = _operadorcomparacionId;
-            this.texto1 = _texto1;
-            this.texto2 = _texto2;
+            this.nombre = _nombre;
         }
     }
 }

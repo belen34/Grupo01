@@ -21,9 +21,9 @@ namespace G01.Service
             this.iReglaUtil = _iReglaUtil;
         }
 
-        public ReglaVO Create(int _operadorComparacionId, string _texto1, string _texto2)
+        public ReglaVO Create(int _reglaId, string _nombre)
         {
-            ReglaObj r = this.iReglaServiceRepository.Create(_operadorComparacionId, _texto1, _texto2);
+            ReglaObj r = this.iReglaServiceRepository.Create(_reglaId,_nombre);
             return this.iReglaUtil.ConviertEntityToVO(r);
         }
         public ReglaVO Delete(int _ReglaId)

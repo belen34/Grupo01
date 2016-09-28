@@ -1,0 +1,23 @@
+﻿<div *ngIf="regla">
+    <h2>Detalles de la regla:</h2>
+    <div>
+        <label>Id de la regla: </label>{{regla.reglaId}}
+    </div>
+    <div>
+        <label id="texto1Name">Operando 1:</label>
+        <input id="test1" #test1 [(ngModel)]="regla.texto1"/>
+        <label id="OperadorName">Operador </label>
+
+        <select id="operadorcombo" #operadorName [(ngModel)]="regla.operadorcomparacionId">
+            <option *ngFor="let operador of operadorcomporacions"
+                    [value]="operador.operadorlogicoId">
+                {{operador.name}}
+            </option>
+        </select>
+        <label id="texto2Name">Operando 2:</label>
+        <input id="test2" #test2 [(ngModel)]="regla.texto2"/>
+        <br />
+      
+    <button id="Saveregla" (click)="save()">Guardar</button>
+    <button (click)="goBack()">Atras</button>
+</div>

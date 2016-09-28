@@ -15,6 +15,8 @@ namespace Grupo01
             // it is NOT necessary to register your controllers
 
             // e.g. container.RegisterType<ITestService, TestService>();
+            container.RegisterType<IoperadorcomparacionsController, operadorcomparacionsController>();
+            container.RegisterType<IReglasController, ReglasController>();
             container.RegisterType<IOperardorLogicosController, OperardorLogicosController>();
             GlobalConfiguration.Configuration.DependencyResolver = new UnityDependencyResolver(container);
         }

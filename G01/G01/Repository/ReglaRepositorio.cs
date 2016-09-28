@@ -30,7 +30,7 @@ namespace G01.Repository
             r.operadorcomparacionId = operadorComparacionId;
             r.texto1 = _texto1;
             r.texto2 = _texto2;
-
+            r.OperadorComparacionObj = null;
             using (var MotorReglasDB = new MotorReglasDB())
             {
                 r = MotorReglasDB.Reglas.Add(r);

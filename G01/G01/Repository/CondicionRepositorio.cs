@@ -71,11 +71,11 @@ namespace G01.Repository
             }
             return r;
         }
-        public ICollection<CondicionObj> ListCondicions()
+        public ICollection<CondicionObj> ListCondiciones()
         {
             using (var MotorReglasDB = new MotorReglasDB())
             {
-                return MotorReglasDB.Condiciones.Include("OperadorComparacionObj").ToList();
+                return MotorReglasDB.Condiciones.ToList();
             }
         }
     }

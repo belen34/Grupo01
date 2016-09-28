@@ -29,7 +29,7 @@ var CondicionService = (function () {
     };
     CondicionService.prototype.getCondicion = function (CondicionId) {
         return this.getCondicions()
-            .then(function (Condicions) { return Condicions.find(function (Condicion) { return Condicion.CondicionId === CondicionId; }); });
+            .then(function (Condicions) { return Condicions.find(function (Condicion) { return Condicion.condicionId === CondicionId; }); });
     };
     CondicionService.prototype.delete = function (index) {
         var url = this.CondicionsUrl + "/" + index;

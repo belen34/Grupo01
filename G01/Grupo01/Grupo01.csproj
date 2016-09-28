@@ -159,6 +159,7 @@
   <ItemGroup>
     <Compile Include="App_Start\UnityConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\ICondicionsController.cs" />
     <Compile Include="Controllers\IoperadorcomparacionsController.cs" />
     <Compile Include="Controllers\IOperardorLogicosController.cs" />
     <Compile Include="Controllers\IReglasController.cs" />

@@ -12,56 +12,56 @@ using System.Web.Http;
 
 namespace Grupo01.Controllers
 {
-    public class ReglasController : ApiController, IReglasController
+    public class CondicionsController : ApiController, ICondicionsController
     {
-        private IReglaService iReglaService;
+        private ICondicionService iCondicionservice;
 
-        public ReglasController()
+        public CondicionsController()
         {
 
 
             var container = new UnityContainer();
 
             container.RegisterType<IReglaRepository, ReglaRepositorio>();
-            container.RegisterType<IReglaService, ReglaService>();
+            container.RegisterType<ICondicionService, CondicionService>();
 
 
             container.RegisterType<IReglaUtil, ReglaUtil>();
 
-            iReglaService = container.Resolve<IReglaService>();
+            iCondicionservice = container.Resolve<ICondicionService>();
 
         }
 
         // GET: api/OperardorLogicos
-        public IEnumerable<ReglaVO> Get()
+        public IEnumerable<CondicionVO> Get()
         {
-            return iReglaService.ListReglas();
+            return iCondicionservice.ListCondiciones();
         }
 
         // GET: api/OperardorLogicos/5
-        public ReglaVO Get(int id)
+        public CondicionVO Get(int id)
         {
-            return iReglaService.Give(id);
+            return iCondicionservice.Give(id);
         }
 
         // POST:api/OperardorLogicos
-        public ReglaVO Post(ReglaVO r)
+        public CondicionVO Post(CondicionVO r)
         {
 
-            return iReglaService.Create(r.operadorcomparacionId, r.texto1, r.texto2);
+            return iCondicionservice.Create(r.operadorcomparacionId, r.operadorLogico1Id, r.operadorLogico2Id,r.texto1, r.texto2);
         }
 
 
-        public void Put([FromBody] ReglaVO r)
+        public void Put([FromBody] CondicionVO r)
         {
 
-            iReglaService.UpDate(r);
+            iCondicionservice.UpDate(r);
         }
 
         // DELETE: api/OperardorLogicos/5
-        public ReglaVO Delete(int id)
+        public CondicionVO Delete(int id)
         {
-            ReglaVO v = iReglaService.Delete(id);
+            CondicionVO v = iCondicionservice.Delete(id);
             return v;
         }
     }

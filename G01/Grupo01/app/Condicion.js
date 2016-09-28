@@ -1,8 +1,10 @@
 "use strict";
 var Condicion = (function () {
-    function Condicion(CondicionId, operadorcomparacionId, texto1, texto2) {
-        this.CondicionId = CondicionId;
+    function Condicion(condicionId, operadorcomparacionId, operadorLogico1Id, operadorLogico2Id, texto1, texto2) {
+        this.condicionId = condicionId;
         this.operadorcomparacionId = operadorcomparacionId;
+        this.operadorLogico1Id = operadorLogico1Id;
+        this.operadorLogico2Id = operadorLogico2Id;
         this.texto1 = texto1;
         this.texto2 = texto2;
     }

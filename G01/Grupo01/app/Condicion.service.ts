@@ -25,7 +25,7 @@ export class CondicionService {
     }
     getCondicion(CondicionId: number) {
         return this.getCondicions()
-            .then(Condicions => Condicions.find(Condicion => Condicion.CondicionId === CondicionId))
+            .then(Condicions => Condicions.find(Condicion => Condicion.condicionId === CondicionId))
     }
     delete(index: number) {
         let url = `${this.CondicionsUrl}/${index}`;

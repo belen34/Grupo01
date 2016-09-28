@@ -12,11 +12,13 @@ var core_1 = require('@angular/core');
 var router_1 = require('@angular/router');
 var Condicion_service_1 = require('./Condicion.service');
 var operadorcomparacion_service_1 = require('./operadorcomparacion.service');
+var logico_service_1 = require('./logico.service');
 var CondicionsDetailComponent = (function () {
-    function CondicionsDetailComponent(CondicionService, route, operadorcomporacionService) {
+    function CondicionsDetailComponent(CondicionService, route, operadorcomporacionService, LogicoService) {
         this.CondicionService = CondicionService;
         this.route = route;
         this.operadorcomporacionService = operadorcomporacionService;
+        this.LogicoService = LogicoService;
     }
     CondicionsDetailComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -32,6 +34,11 @@ var CondicionsDetailComponent = (function () {
         var _this = this;
         this.operadorcomporacionService.getoperadorcomparacions().then(function (operadorcomporacions) { return _this.operadorcomporacions
             = operadorcomporacions; });
+    };
+    CondicionsDetailComponent.prototype.getoperadorlogicos = function () {
+        var _this = this;
+        this.LogicoService.getlogicos().then(function (operadorlogico) { return _this.operadorlogico
+            = operadorlogico; });
     };
     CondicionsDetailComponent.prototype.ngOnDestroy = function () {
         this.sub.unsubscribe();
@@ -49,7 +56,7 @@ var CondicionsDetailComponent = (function () {
             templateUrl: './app/Condicion.detail.component.html',
             styleUrls: ['./app/logicos.component.css'],
         }), 
-        __metadata('design:paramtypes', [Condicion_service_1.CondicionService, router_1.ActivatedRoute, operadorcomparacion_service_1.OperadorComparacionService])
+        __metadata('design:paramtypes', [Condicion_service_1.CondicionService, router_1.ActivatedRoute, operadorcomparacion_service_1.OperadorComparacionService, logico_service_1.LogicoService])
     ], CondicionsDetailComponent);
     return CondicionsDetailComponent;
 }());

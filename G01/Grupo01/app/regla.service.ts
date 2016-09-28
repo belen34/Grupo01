@@ -7,11 +7,11 @@ import 'rxjs/add/operator/toPromise';
 import {Observable} from 'rxjs/Rx';
 import 'rxjs/add/operator/map';
 @Injectable()
-export class DoctorService {
+export class ReglaService {
     //maximo: number = 4;
     private headers = new Headers({ 'Content-Type': 'application/json' });
     private headers2 = new Headers({ 'Accept': 'application/json' });
-    private doctorssUrl: string = '/api/Reglas';  // URL to web api
+    private reglassUrl: string = '/api/Reglas';  // URL to web api
     regla: Regla;
     constructor(private http: Http) { }
 

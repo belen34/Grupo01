@@ -36,9 +36,9 @@ export class CondicionsAddComponent implements OnInit {
      
         this.getoperadorcomparacions();
     }
-    addCondicion(operadorId: number, t1: string, t2: string) {
+    addCondicion(operadorId: number, operadorlogico1: number, operadorlogico2: number, t1: string, t2: string) {
 
-        this.CondicionService.addCondicion(operadorId, t1, t2);
+        this.CondicionService.addCondicion(operadorId,operadorlogico1, operadorlogico2, t1, t2);
 
     }
   

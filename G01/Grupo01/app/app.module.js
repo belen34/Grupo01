@@ -14,14 +14,20 @@ var forms_1 = require('@angular/forms');
 var http_1 = require('@angular/http');
 var logicos_component_1 = require('./logicos.component');
 var Condicions_component_1 = require('./Condicions.component');
+var reglas_component_1 = require('./reglas.component');
 var app_component_1 = require('./app.component');
 var dashboard_component_1 = require('./dashboard.component');
 var logico_service_1 = require('./logico.service');
 var Condicion_service_1 = require('./Condicion.service');
+var regla_service_1 = require('./regla.service');
+//dsdsfdgdfg
 var operadorcomparacion_service_1 = require('./operadorcomparacion.service');
 var logicos_add_component_1 = require('./logicos.add.component');
 var logicos_delete_component_1 = require('./logicos.delete.component');
 var logicos_detail_component_1 = require('./logicos.detail.component');
+var reglas_add_component_1 = require('./reglas.add.component');
+var reglas_delete_component_1 = require('./reglas.delete.component');
+var reglas_detail_component_1 = require('./reglas.detail.component');
 var Condicions_add_component_1 = require('./Condicions.add.component');
 var Condicions_delete_component_1 = require('./Condicions.delete.component');
 var Condicions_detail_component_1 = require('./Condicions.detail.component');
@@ -47,12 +53,17 @@ var AppModule = (function () {
                 logicos_detail_component_1.LogicosDetailComponent,
                 Condicions_add_component_1.CondicionsAddComponent,
                 Condicions_delete_component_1.CondicionsDeleteComponent,
-                Condicions_detail_component_1.CondicionsDetailComponent
+                Condicions_detail_component_1.CondicionsDetailComponent,
+                reglas_component_1.ReglasComponent,
+                reglas_add_component_1.ReglasAddComponent,
+                reglas_delete_component_1.ReglasDeleteComponent,
+                reglas_detail_component_1.ReglasDetailComponent
             ],
             providers: [
                 logico_service_1.LogicoService,
                 Condicion_service_1.CondicionService,
-                operadorcomparacion_service_1.OperadorComparacionService
+                operadorcomparacion_service_1.OperadorComparacionService,
+                regla_service_1.ReglaService
             ],
             bootstrap: [app_component_1.AppComponent]
         }), 

@@ -28,6 +28,10 @@ var appRoutes = [
         component: Condicions_component_1.CondicionsComponent
     },
     {
+        path: 'reglas',
+        component: Condicions_component_1.CondicionsComponent
+    },
+    {
         path: 'deletelogico/:id',
         component: logicos_delete_component_1.LogicosDeleteComponent
     },

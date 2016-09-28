@@ -28,11 +28,11 @@ var CondicionsComponent = (function () {
         this.selectedCondicion = Condicion;
     };
     CondicionsComponent.prototype.gotoDetail = function (Condicion) {
-        console.log("En el detalle", Condicion.CondicionId);
-        this.router.navigate(['/detail', Condicion.CondicionId]);
+        console.log("En el detalle", Condicion.condicionId);
+        this.router.navigate(['/detail', Condicion.condicionId]);
     };
     CondicionsComponent.prototype.delete = function (Condicion) {
-        this.router.navigate(['/delete', Condicion.CondicionId]);
+        this.router.navigate(['/delete', Condicion.condicionId]);
     };
     CondicionsComponent = __decorate([
         core_1.Component({

@@ -29,10 +29,10 @@ export class CondicionsComponent implements OnInit {
         this.selectedCondicion = Condicion;
     }
     gotoDetail(Condicion: Condicion): void {
-        console.log("En el detalle", Condicion.CondicionId);
-        this.router.navigate(['/detail', Condicion.CondicionId])
+        console.log("En el detalle", Condicion.condicionId);
+        this.router.navigate(['/detail', Condicion.condicionId])
     }
     delete(Condicion: Condicion): void {
-        this.router.navigate(['/delete', Condicion.CondicionId]);
+        this.router.navigate(['/delete', Condicion.condicionId]);
     }
 }

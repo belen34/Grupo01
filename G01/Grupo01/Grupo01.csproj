@@ -149,6 +149,7 @@
     <Content Include="app\Condicion.delete.component.html" />
     <Content Include="app\Condicion.detail.component.html" />
     <Content Include="app\Condicions.component.html" />
+    <Content Include="app\reglas.component.html" />
     <Content Include="Global.asax" />
     <Content Include="index.html" />
     <Content Include="scripts\ai.0.22.19-build00125.js" />
@@ -228,6 +229,12 @@
     <TypeScriptCompile Include="app\Condicions.component.ts" />
     <TypeScriptCompile Include="app\Condicions.delete.component.ts" />
     <TypeScriptCompile Include="app\Condicions.detail.component.ts" />
+    <TypeScriptCompile Include="app\regla.service.ts" />
+    <TypeScriptCompile Include="app\regla.ts" />
+    <TypeScriptCompile Include="app\reglas.add.component.ts" />
+    <TypeScriptCompile Include="app\reglas.component.ts" />
+    <TypeScriptCompile Include="app\reglas.delete.component.ts" />
+    <TypeScriptCompile Include="app\reglas.detail.component.ts" />
     <TypeScriptCompile Include="app\rxjs-extensions.ts" />
     <TypeScriptCompile Include="typings\globals\angular-protractor\index.d.ts" />
     <TypeScriptCompile Include="typings\globals\core-js\index.d.ts" />

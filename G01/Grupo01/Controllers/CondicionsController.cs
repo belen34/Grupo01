@@ -22,11 +22,11 @@ namespace Grupo01.Controllers
 
             var container = new UnityContainer();
 
-            container.RegisterType<IReglaRepository, ReglaRepositorio>();
+            container.RegisterType<ICondicionRepository, CondicionRepositorio>();
             container.RegisterType<ICondicionService, CondicionService>();
 
 
-            container.RegisterType<IReglaUtil, ReglaUtil>();
+            container.RegisterType<ICondicionUtil, CondicionUtil>();
 
             iCondicionservice = container.Resolve<ICondicionService>();
 

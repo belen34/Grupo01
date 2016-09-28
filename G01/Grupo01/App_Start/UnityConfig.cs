@@ -16,7 +16,7 @@ namespace Grupo01
 
             // e.g. container.RegisterType<ITestService, TestService>();
             container.RegisterType<IoperadorcomparacionsController, operadorcomparacionsController>();
-            container.RegisterType<IReglasController, ReglasController>();
+            container.RegisterType<ICondicionsController, CondicionsController>();
             container.RegisterType<IOperardorLogicosController, OperardorLogicosController>();
             GlobalConfiguration.Configuration.DependencyResolver = new UnityDependencyResolver(container);
         }

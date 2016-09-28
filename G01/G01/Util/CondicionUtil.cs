@@ -34,10 +34,12 @@ namespace G01.Util
             res.operadorLogico2Id = _condicion.operadorLogico2Id;
             res.texto1 = _condicion.texto1;
             res.texto2 = _condicion.texto2;
-            res.OperadorComparacionObj = _condicion.OperadorComparacionObj;
-            res.OperadorLogicoObj1 = _condicion.OperadorLogicoObj1;
-            res.OperadorLogicoObj2 = _condicion.OperadorLogicoObj2;
-            return res;
+            //if (_condicion.OperadorComparacionObj != null) {
+            //    res.OperadorComparacionObj = _condicion.OperadorComparacionObj;
+            //    res.OperadorLogicoObj1 = _condicion.OperadorLogicoObj1;
+            //    res.OperadorLogicoObj2 = _condicion.OperadorLogicoObj2;
+            //}
+                return res;
         }
 
         public ICollection<CondicionVO> ConviertEntityListToVOList(ICollection<CondicionObj> _l)

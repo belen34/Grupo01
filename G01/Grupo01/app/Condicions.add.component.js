@@ -26,8 +26,8 @@ var CondicionsAddComponent = (function () {
     CondicionsAddComponent.prototype.ngOnInit = function () {
         this.getoperadorcomparacions();
     };
-    CondicionsAddComponent.prototype.addCondicion = function (operadorId, t1, t2) {
-        this.CondicionService.addCondicion(operadorId, t1, t2);
+    CondicionsAddComponent.prototype.addCondicion = function (operadorId, operadorlogico1, operadorlogico2, t1, t2) {
+        this.CondicionService.addCondicion(operadorId, operadorlogico1, operadorlogico2, t1, t2);
     };
     CondicionsAddComponent.prototype.goBack = function () {
         window.history.back();

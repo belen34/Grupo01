@@ -5,8 +5,10 @@ import { Condicion } from './Condicion';
 import { CondicionService } from './Condicion.service';
 
 import { OperadorComparacion } from './operadorcomparacion';
+import { Logico } from './logico';
 
 import { OperadorComparacionService } from './operadorcomparacion.service';
+import { LogicoService } from './logico.service';
 
 @Component({
     selector: 'my-Condicion-detail',
@@ -18,11 +20,13 @@ export class CondicionsDetailComponent implements OnInit {
     Condicion: Condicion;
    
     operadorcomporacions: OperadorComparacion[];
+    operadorlogico: Logico[];
     sub: any;
     constructor(private CondicionService: CondicionService,
         private route: ActivatedRoute,
        
-        private operadorcomporacionService: OperadorComparacionService) { }
+        private operadorcomporacionService: OperadorComparacionService,
+        private LogicoService: LogicoService ) { }
     ngOnInit() {
         this.sub = this.route.params.subscribe(params => {
             let id = +params['id'];
@@ -37,6 +41,11 @@ export class CondicionsDetailComponent implements OnInit {
         this.operadorcomporacionService.getoperadorcomparacions().then(
             operadorcomporacions => this.operadorcomporacions
                 = operadorcomporacions);
+    }
+    getoperadorlogicos(): void {
+        this.LogicoService.getlogicos().then(
+            operadorlogico => this.operadorlogico
+                = operadorlogico);
     }
     ngOnDestroy() {
         this.sub.unsubscribe();

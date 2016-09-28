@@ -8,61 +8,61 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var Condicion_1 = require('./Condicion');
+var regla_1 = require('./regla');
 var core_1 = require('@angular/core');
 var http_1 = require('@angular/http');
 require('rxjs/add/operator/toPromise');
 require('rxjs/add/operator/map');
-var CondicionService = (function () {
-    function CondicionService(http) {
+var ReglaService = (function () {
+    function ReglaService(http) {
         this.http = http;
         //maximo: number = 4;
         this.headers = new http_1.Headers({ 'Content-Type': 'application/json' });
         this.headers2 = new http_1.Headers({ 'Accept': 'application/json' });
-        this.CondicionsUrl = '/api/Condicions'; // URL to web api
+        this.reglassUrl = '/api/Reglas'; // URL to web api
     }
-    CondicionService.prototype.getCondicions = function () {
-        return this.http.get(this.CondicionsUrl, { headers: this.headers2 })
+    ReglaService.prototype.getReglas = function () {
+        return this.http.get(this.reglassUrl, { headers: this.headers2 })
             .toPromise()
             .then(function (response) { return response.json(); })
             .catch(this.handleError);
     };
-    CondicionService.prototype.getCondicion = function (CondicionId) {
-        return this.getCondicions()
-            .then(function (Condicions) { return Condicions.find(function (Condicion) { return Condicion.condicionId === CondicionId; }); });
+    ReglaService.prototype.getRegla = function (reglaId) {
+        return this.getReglas()
+            .then(function (reglas) { return reglas.find(function (regla) { return regla.reglaId === reglaId; }); });
     };
-    CondicionService.prototype.delete = function (index) {
-        var url = this.CondicionsUrl + "/" + index;
+    ReglaService.prototype.delete = function (index) {
+        var url = this.reglassUrl + "/" + index;
         return this.http.delete(url, { headers: this.headers })
             .toPromise()
-            .then(function () { return null; })
+            .then(function (response) { return response.json(); })
             .catch(this.handleError);
     };
-    CondicionService.prototype.addCondicion = function (operadorId, operadorl1Id, operadol2rId, t1, t2) {
-        var p = new Condicion_1.Condicion(0, operadorId, operadorl1Id, operadol2rId, t1, t2);
+    ReglaService.prototype.addRegla = function (name) {
+        var p = new regla_1.Regla(0, name);
         return this.http
-            .post(this.CondicionsUrl, JSON.stringify(p), { headers: this.headers })
+            .post(this.reglassUrl, JSON.stringify(p), { headers: this.headers })
             .toPromise()
             .then(function (res) { return res.json(); })
             .catch(this.handleError);
     };
-    CondicionService.prototype.updateCondicion = function (Condicion) {
-        var url = this.CondicionsUrl + "/" + Condicion.condicionId;
+    ReglaService.prototype.updateRegla = function (regla) {
+        var url = this.reglassUrl + "/" + regla.reglaId;
         return this.http
-            .put(url, JSON.stringify(Condicion), { headers: this.headers })
+            .put(url, JSON.stringify(regla), { headers: this.headers })
             .toPromise()
-            .then(function () { return Condicion; })
+            .then(function () { return regla; })
             .catch(this.handleError);
     };
-    CondicionService.prototype.handleError = function (error) {
+    ReglaService.prototype.handleError = function (error) {
         console.error('Un error ha ocurrido', error);
         return Promise.reject(error.message || error);
     };
-    CondicionService = __decorate([
+    ReglaService = __decorate([
         core_1.Injectable(), 
         __metadata('design:paramtypes', [http_1.Http])
-    ], CondicionService);
-    return CondicionService;
+    ], ReglaService);
+    return ReglaService;
 }());
-exports.CondicionService = CondicionService;
-//# sourceMappingURL=Condicion.service.js.map
+exports.ReglaService = ReglaService;
+//# sourceMappingURL=regla.service.js.map

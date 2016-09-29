@@ -115,6 +115,19 @@ namespace WebRecetaElectronica.Tests
             driver.FindElement(By.Id("test2")).SendKeys("2");
             driver.FindElement(By.CssSelector("#addCondicion > #addCondicion")).Click();
         }
+        [TestMethod]
+        public void TestSelenium_UpdateCondicion()
+        {
+            driver.Navigate().GoToUrl(baseURL + "index.html");
+            driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(10));
+            driver.FindElement(By.Id("condiciones")).Click();
+            driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(10));
+            driver.FindElement(By.CssSelector("td")).Click();
+            driver.FindElement(By.Id("edit")).Click();
+            driver.FindElement(By.Id("test1")).Clear();
+            driver.FindElement(By.Id("test1")).SendKeys("azul22");
+            driver.FindElement(By.Id("SaveCondicion")).Click();
+        }
         private void StartIisExpress()
         {
             CurrentPath = Directory.GetCurrentDirectory();

@@ -37,6 +37,14 @@ li {
 li:last-child {
   border: none;
 }
+
+
+textarea{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color : gainsboro;
+}
  
 li a {
   text-decoration: none;

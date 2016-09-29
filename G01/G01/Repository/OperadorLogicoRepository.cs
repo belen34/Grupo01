@@ -43,15 +43,16 @@ namespace G01.Repository
             }
             return _ol;
         }
-        public OperadorLogicoObj Delete(int doctorId)
+        public OperadorLogicoObj Delete(int logicoId)
         {
             OperadorLogicoObj r = null;
             using (var MotorReglasDB = new MotorReglasDB())
             {
-                r = MotorReglasDB.Operadoreslogicos.Find(doctorId);
-                r = MotorReglasDB.Operadoreslogicos.Remove(r);
+               
                 try
                 {
+                    r = MotorReglasDB.Operadoreslogicos.Find(logicoId);
+                    r = MotorReglasDB.Operadoreslogicos.Remove(r);
                     MotorReglasDB.SaveChanges();
                 }
                 catch

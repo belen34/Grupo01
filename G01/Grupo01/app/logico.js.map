@@ -1,1 +1,1 @@
-{"version":3,"file":"logico.js","sourceRoot":"","sources":["logico.ts"],"names":[],"mappings":";AAAA;IAII,gBAAY,gBAAwB,EAAE,IAAY;QAC9C,IAAI,CAAC,gBAAgB,GAAG,gBAAgB,CAAC;QACzC,IAAI,CAAC,IAAI,GAAG,IAAI,CAAC;IACrB,CAAC;IACL,aAAC;AAAD,CAAC,AARD,IAQC;AARY,cAAM,SAQlB,CAAA"}
+{"version":3,"file":"logico.js","sourceRoot":"","sources":["logico.ts"],"names":[],"mappings":";AAAC;IAIG,gBAAY,gBAAwB,EAAE,IAAY;QAC9C,IAAI,CAAC,gBAAgB,GAAG,gBAAgB,CAAC;QACzC,IAAI,CAAC,IAAI,GAAG,IAAI,CAAC;IACrB,CAAC;IACL,aAAC;AAAD,CAAC,AARA,IAQA;AARa,cAAM,SAQnB,CAAA"}

@@ -84,6 +84,7 @@ namespace G01.Repository
             using (var MotorReglasDB = new MotorReglasDB())
             {
                 return MotorReglasDB.Condiciones.Include("OperadorComparacionObj").Include("OperadorLogicoObj1").Include("OperadorLogicoObj2").Include("ReglaObj").ToList();
+
             }
         }
     }

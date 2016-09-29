@@ -18,5 +18,5 @@ import { Component } from '@angular/core';
    
 })
 export class AppComponent {
-    title = 'Motor de condiciones';
+    title = 'Motor de reglas';
 }

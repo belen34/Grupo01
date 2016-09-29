@@ -128,6 +128,16 @@ namespace WebRecetaElectronica.Tests
             driver.FindElement(By.Id("test1")).SendKeys("azul22");
             driver.FindElement(By.Id("SaveCondicion")).Click();
         }
+        [TestMethod]
+        public void TestSelenium_DeleteCondicion()
+        {
+            driver.Navigate().GoToUrl(baseURL + "index.html");
+            driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(10));
+            driver.FindElement(By.XPath("//table[@id='Condicions']/tbody/tr[10]/td")).Click();
+            driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(30));
+            driver.FindElement(By.Id("delete")).Click();
+            driver.FindElement(By.CssSelector("button")).Click();
+        }
         private void StartIisExpress()
         {
             CurrentPath = Directory.GetCurrentDirectory();

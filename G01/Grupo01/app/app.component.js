@@ -12,7 +12,7 @@ var core_1 = require('@angular/core');
 //import { ROUTER_DIRECTIVES } from '@angular/router';
 var AppComponent = (function () {
     function AppComponent() {
-        this.title = 'Motor de condiciones';
+        this.title = 'Motor de reglas';
     }
     AppComponent = __decorate([
         core_1.Component({

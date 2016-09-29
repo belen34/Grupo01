@@ -47,7 +47,7 @@ namespace UnitTestGrupo01
         public void ReglaTest_CrearRegla()
         {
             ReglaVO r = this.iReglaController.Create("inferior");
-            Assert.AreEqual(2, r.reglaId);
+            Assert.AreEqual("inferior", r.nombre);
 
         }
         [TestMethod]

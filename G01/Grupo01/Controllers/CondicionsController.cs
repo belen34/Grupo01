@@ -32,23 +32,23 @@ namespace Grupo01.Controllers
 
         }
 
-        // GET: api/OperardorLogicos
+        // GET: api/Condiciones
         public IEnumerable<CondicionVO> Get()
         {
             return iCondicionservice.ListCondiciones();
         }
 
-        // GET: api/OperardorLogicos/5
+        // GET: api/Condiciones/5
         public CondicionVO Get(int id)
         {
             return iCondicionservice.Give(id);
         }
 
-        // POST:api/OperardorLogicos
+        // POST:api/Condiciones
         public CondicionVO Post(CondicionVO r)
         {
 
-            return iCondicionservice.Create(r.operadorcomparacionId, r.operadorLogico1Id, r.operadorLogico2Id,r.texto1, r.texto2);
+            return iCondicionservice.Create(r.operadorcomparacionId, r.reglaId, r.operadorLogico1Id, r.operadorLogico2Id, r.texto1, r.texto2);
         }
 
 
@@ -58,7 +58,7 @@ namespace Grupo01.Controllers
             iCondicionservice.UpDate(r);
         }
 
-        // DELETE: api/OperardorLogicos/5
+        // DELETE: api/Condiciones/5
         public CondicionVO Delete(int id)
         {
             CondicionVO v = iCondicionservice.Delete(id);

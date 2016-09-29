@@ -34,7 +34,7 @@ namespace UnitTestGrupo01
             }
 
             [TestMethod]
-            public void DoctorTest_GiveOpeLogico()
+            public void OperadorLogicoTest_GiveOpeLogico()
             {
                 OperadorLogicoVO r = this.iOperadorLogicoController.Create("&&");
 
@@ -44,7 +44,7 @@ namespace UnitTestGrupo01
 
             }
             [TestMethod]
-            public void DoctorTest_CrearOpeLogico()
+            public void OperadorLogicoTest_CrearOpeLogico()
             {
                  OperadorLogicoVO r = this.iOperadorLogicoController.Create("||");
 
@@ -52,7 +52,7 @@ namespace UnitTestGrupo01
 
             }
             [TestMethod]
-            public void DoctorTest_UpdateOpeLogico()
+            public void OperadorLogicoTest_UpdateOpeLogico()
             {
                 OperadorLogicoVO r = this.iOperadorLogicoController.Create("!=");
                 r.name = "Negacion";
@@ -64,7 +64,7 @@ namespace UnitTestGrupo01
                 }
             }
             [TestMethod]
-            public void DoctorTest_DeleteOpeLogico()
+            public void OperadorLogicoTest_DeleteOpeLogico()
             {
                 OperadorLogicoVO r = this.iOperadorLogicoController.Create("no valido");
                 OperadorLogicoVO sDelete = this.iOperadorLogicoController.Delete(r.operadorlogicoId);
@@ -73,7 +73,7 @@ namespace UnitTestGrupo01
 
             }
             [TestMethod]
-            public void DoctorTest_AllOpeLogico()
+            public void OperadorLogicoTest_AllOpeLogico()
             {
                 List<OperadorLogicoVO> lOL = iOperadorLogicoController.ListOpLogicos();
                 Assert.IsTrue(lOL.Count > 0);

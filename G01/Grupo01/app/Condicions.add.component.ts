@@ -2,11 +2,16 @@
 import { ActivatedRoute, Params } from '@angular/router';
 
 import { Condicion } from './Condicion';
+import { Regla } from './Regla';
 
 import { OperadorComparacion } from './operadorcomparacion';
 import { CondicionService } from './Condicion.service';
 
 import { OperadorComparacionService } from './operadorcomparacion.service';
+import { Logico } from './logico';
+
+import { ReglaService } from './regla.service';
+import { LogicoService } from './logico.service';
 
 @Component({
     selector: 'my-Condicion-detail',
@@ -16,29 +21,54 @@ import { OperadorComparacionService } from './operadorcomparacion.service';
 })
 export class CondicionsAddComponent implements OnInit {
     Condicion: Condicion;
-    Condicions: Condicion[];
+  
     selectedCondicion: Condicion;
-
-    operadors: OperadorComparacion[];
+    reglas: Regla[];
+    
+    operadorcomporacions: OperadorComparacion[];
+    operadorlogico1: Logico[];
+    operadorlogico2: Logico[];
     sub: any;
     constructor(
+        private ReglaService: ReglaService,
         private CondicionService: CondicionService,
         private route: ActivatedRoute,
-        private operadorcomparacionService: OperadorComparacionService
+
+        private operadorcomporacionService: OperadorComparacionService,
+        private LogicoService: LogicoService
     ) { }
 
-    getoperadorcomparacions(): void {
-        this.operadorcomparacionService.getoperadorcomparacions().then(
-            operador => this.operadors
-                = operador);
+    getoperadorcomporacions(): void {
+        this.operadorcomporacionService.getoperadorcomparacions().then(
+            operadorcomporacions => this.operadorcomporacions
+                = operadorcomporacions);
+    }
+    getoperadorlogicos1(): void {
+        this.LogicoService.getlogicos().then(
+            operadorlogico => this.operadorlogico1
+                = operadorlogico);
+    }
+    getoperadorlogicos2(): void {
+        this.LogicoService.getlogicos().then(
+            operadorlogico => this.operadorlogico2
+                = operadorlogico);
+    }
+    getoperadorreglas(): void {
+        this.ReglaService.getReglas().then(
+            reglas => this.reglas
+                = reglas);
     }
     ngOnInit(): void {
-     
-        this.getoperadorcomparacions();
-    }
-    addCondicion(operadorId: number, operadorlogico1: number, operadorlogico2: number, t1: string, t2: string) {
 
-        this.CondicionService.addCondicion(operadorId,operadorlogico1, operadorlogico2, t1, t2);
+       
+        this.getoperadorcomporacions();
+        this.getoperadorlogicos1();
+        this.getoperadorlogicos2();
+        this.getoperadorreglas();
+    }
+    addCondicion(reglaId: number, operadorco: number, operadorl1: number, operadorl2: number, t1: string, t2: string) {
+        console.log("Valor de la regla", reglaId);
+        this.CondicionService.addCondicion(reglaId, operadorco, operadorl1, operadorl2, t1, t2);
 
     }
   

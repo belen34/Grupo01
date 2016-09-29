@@ -1,24 +1,46 @@
 ﻿<div id="addCondicion">
-    <h2> Añadir una nueva Condicion:</h2>
+    <h2> Añadir una nueva Regla:</h2>
 
     <br>
 
     <div>
-        <label id="texto1Name">texto1:</label>
-        <input id="test1" #test1 />
-        <label id="OperadorName">Operador </label>
-        
-        <select id="operadorcombo" #operadorName>
-            <option *ngFor="let operador of operadors"
-                    [value]="operador.operadorlogicoId">
-                {{operador.name}}
+        <label id="OperadorName">Regla </label>
+        <select id="operadorcombo" #regla>
+            <option *ngFor="let regla of reglas" [value]="regla.reglaId">
+                {{regla.nombre}}
             </option>
         </select>
-        <label id="texto2Name">texto2:</label>
-        <input id="test2" #test2 />
+        <label id="OperadorName">Operador Logico 1 </label>
+        <select id="operadorcombo" #operadorl1 >
+            <option *ngFor="let operador1 of operadorlogico1"
+                    [value]="operador1.operadorlogicoId">
+                {{operador1.name}}
+            </option>
+        </select>
+        <label id="OperadorName">Operador Logico 2</label>
+        <select id="doctorcombo" #operadorl2 >
+            <option *ngFor="let operador2 of operadorlogico2"
+                    [value]="operador2.operadorlogicoId">
+                {{operador2.name}}
+            </option>
+        </select>
+
+        <label id="texto1Name">Operando 1:</label>
+        <input id="test1" #test1  />
+        <label id="OperadorName">Operador </label>
+
+        <select id="operadorcombo" #operadorco >
+            <option *ngFor="let operador3 of operadorcomporacions"
+                    [value]="operador3.operadorComparacionId">
+                {{operador3.name}}
+            </option>
+        </select>
+        <label id="texto2Name">Operando 2:</label>
+        <input id="test2" #test2  />
         <br />
     </div>
-    <button id="addCondicion" (click)="addCondicion(operadorName.value,test1.value,test2.value); operadorName.value=''; test1.value='';test2.value='';">Add</button>
+    <button id="addCondicion" 
+ (click)="addCondicion(regla.value,operadorco.value, operadorl1.value,operadorl2.value, test1.value, test2.value); regla.value=''; operadorco.value='';operadorl1.value='';operadorl2.value=''; test1.value='';test2.value='';">Add</button>
     <button (click)="goBack()">Atras</button>
 
 </div>

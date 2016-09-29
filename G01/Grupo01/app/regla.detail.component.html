@@ -1,4 +1,4 @@
-﻿<div *ngIf="doctor">
+﻿<div *ngIf="regla">
     <h2>Detalles de la Regla:</h2>
     <div>
         <label>Id de la Regla: </label>{{regla.reglaId}}
@@ -7,7 +7,7 @@
        
         <label>Nombre de la Regla: </label>
 
-        <input id="ReglaName" [(ngModel)]="regla.name" placeholder="name" />
+        <input id="ReglaName" [(ngModel)]="regla.nombre" placeholder="nombre" />
  
     </div>
     <button id="SaveRegla" (click)="save()">Guardar</button>

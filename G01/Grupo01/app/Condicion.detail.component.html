@@ -1,29 +1,35 @@
 ﻿<div *ngIf="Condicion">
     <h2>Detalles de la Condicion:</h2>
+   
     <div>
-        <label>Id de la Condicion: </label>{{Condicion.CondicionId}}
-    </div>
-    <div>
-        <select id="operadorcombo" #operadorName [(ngModel)]="Condicion.operadorcomparacionId">
-            <option *ngFor="let operador of operadorlogico"
-                    [value]="Condicion.operadorLogico1Id">
-                {{operador.name}}
+        <label id="OperadorName">Regla </label>
+        <select id="operadorcombo" #regla [(ngModel)]="Condicion.reglaId">
+            <option *ngFor="let regla of reglas"  [value]="regla.reglaId">
+                {{regla.nombre}}
             </option>
         </select>
-        <select id="operadorcombo" #operadorName [(ngModel)]="Condicion.operadorcomparacionId">
-            <option *ngFor="let operador of operadorlogico"
-                    [value]="Condicion.operadorLogico2Id">
-                {{operador.name}}
+        <label id="OperadorName">Operador lógico </label>
+        <select id="operadorcombo" #operadorl1 [(ngModel)]="Condicion.operadorLogico1Id">
+            <option *ngFor="let operador1 of operadorlogico1"
+                    [value]="operador1.operadorlogicoId">
+                {{operador1.name}}
+            </option>
+        </select>
+        <label id="OperadorName">Operador lógico </label>
+        <select id="doctorcombo" #operadorl2 [(ngModel)]="Condicion.operadorLogico2Id">
+            <option *ngFor="let operador2 of operadorlogico2"
+                    [value]="operador2.operadorlogicoId">
+                {{operador2.name}}
             </option>
         </select>
         <label id="texto1Name">Operando 1:</label>
         <input id="test1" #test1 [(ngModel)]="Condicion.texto1"/>
         <label id="OperadorName">Operador </label>
 
-        <select id="operadorcombo" #operadorName [(ngModel)]="Condicion.operadorcomparacionId">
-            <option *ngFor="let operador of operadorcomporacions"
-                    [value]="Condicion.operadorcomparacionId">
-                {{operador.name}}
+        <select id="operadorcombo" #operadorco [(ngModel)]="Condicion.operadorcomparacionId">
+            <option *ngFor="let operador3 of operadorcomporacions"
+                    [value]="operador3.operadorComparacionId">
+                {{operador3.name}}
             </option>
         </select>
         <label id="texto2Name">Operando 2:</label>

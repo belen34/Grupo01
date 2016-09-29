@@ -6,9 +6,10 @@ import { CondicionService } from './Condicion.service';
 
 import { OperadorComparacion } from './operadorcomparacion';
 import { Logico } from './logico';
-
+import { ReglaService } from './regla.service';
 import { OperadorComparacionService } from './operadorcomparacion.service';
 import { LogicoService } from './logico.service';
+import { Regla } from './Regla';
 
 @Component({
     selector: 'my-Condicion-detail',
@@ -18,13 +19,14 @@ import { LogicoService } from './logico.service';
 })
 export class CondicionsDetailComponent implements OnInit {
     Condicion: Condicion;
-   
+    reglas: Regla[];
     operadorcomporacions: OperadorComparacion[];
-    operadorlogico: Logico[];
+    operadorlogico1: Logico[];
+    operadorlogico2: Logico[];
     sub: any;
     constructor(private CondicionService: CondicionService,
         private route: ActivatedRoute,
-       
+        private ReglaService: ReglaService,
         private operadorcomporacionService: OperadorComparacionService,
         private LogicoService: LogicoService ) { }
     ngOnInit() {
@@ -33,8 +35,11 @@ export class CondicionsDetailComponent implements OnInit {
             this.CondicionService.getCondicion(id)
                 .then(Condicion => this.Condicion = Condicion);
         });
-        console.log("Condicion en el detail", this.Condicion);
+        console.log("sfdghsf", this.Condicion );
         this.getoperadorcomporacions();
+        this.getoperadorlogicos1();
+        this.getoperadorlogicos2();
+        this.getoperadorreglas();
     }
 
     getoperadorcomporacions(): void {
@@ -42,10 +47,20 @@ export class CondicionsDetailComponent implements OnInit {
             operadorcomporacions => this.operadorcomporacions
                 = operadorcomporacions);
     }
-    getoperadorlogicos(): void {
+    getoperadorlogicos1(): void {
         this.LogicoService.getlogicos().then(
-            operadorlogico => this.operadorlogico
+            operadorlogico => this.operadorlogico1
                 = operadorlogico);
+    }
+    getoperadorlogicos2(): void {
+        this.LogicoService.getlogicos().then(
+            operadorlogico => this.operadorlogico2
+                = operadorlogico);
+    }
+    getoperadorreglas(): void {
+        this.ReglaService.getReglas().then(
+            reglas => this.reglas
+                = reglas);
     }
     ngOnDestroy() {
         this.sub.unsubscribe();
@@ -54,6 +69,7 @@ export class CondicionsDetailComponent implements OnInit {
         window.history.back();
     }
     save(): void {
+        
         this.CondicionService.updateCondicion(this.Condicion)
             .then(this.goBack);
     }

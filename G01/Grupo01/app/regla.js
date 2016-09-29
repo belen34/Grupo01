@@ -1,8 +1,8 @@
 "use strict";
 var Regla = (function () {
-    function Regla(reglaId, name) {
+    function Regla(reglaId, nombre) {
         this.reglaId = reglaId;
-        this.name = name;
+        this.nombre = nombre;
     }
     return Regla;
 }());

@@ -1,9 +1,9 @@
 ﻿export class Regla {
     reglaId: number;
-    name: string;
+    nombre: string;
    
-    constructor(reglaId: number, name: string) {
+    constructor(reglaId: number, nombre: string) {
         this.reglaId = reglaId;
-        this.name = name;
+        this.nombre = nombre;
     }
 }

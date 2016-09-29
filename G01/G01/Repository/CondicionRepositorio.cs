@@ -18,6 +18,9 @@ namespace G01.Repository
                // r = MotorReglasDB.Condicions.Find(_Condicion);
                 r = MotorReglasDB.Condiciones
                    .Include(v2 => v2.OperadorComparacionObj)
+                   .Include(v2 => v2.OperadorLogicoObj1)
+                   .Include(v2 => v2.OperadorLogicoObj2)
+                   .Include(v2 => v2.ReglaObj)
                    .Where(v3 => v3.condicionId == _CondicionId)
                    .FirstOrDefault();
             }
@@ -45,6 +48,10 @@ namespace G01.Repository
         }
         public CondicionObj UpDate(CondicionObj _Condicion)
         {
+            _Condicion.OperadorComparacionObj = null;
+            _Condicion.OperadorLogicoObj1 = null;
+            _Condicion.ReglaObj = null;
+            _Condicion.OperadorLogicoObj2 = null;
             using (var MotorReglasDB = new MotorReglasDB())
             {
                 _Condicion = MotorReglasDB.Condiciones.Attach(_Condicion);
@@ -76,7 +83,7 @@ namespace G01.Repository
         {
             using (var MotorReglasDB = new MotorReglasDB())
             {
-                return MotorReglasDB.Condiciones.ToList();
+                return MotorReglasDB.Condiciones.Include("OperadorComparacionObj").Include("OperadorLogicoObj1").Include("OperadorLogicoObj2").Include("ReglaObj").ToList();
             }
         }
     }

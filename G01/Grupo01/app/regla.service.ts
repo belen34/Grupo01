@@ -11,7 +11,7 @@ export class ReglaService {
     //maximo: number = 4;
     private headers = new Headers({ 'Content-Type': 'application/json' });
     private headers2 = new Headers({ 'Accept': 'application/json' });
-    private reglassUrl: string = '/api/Reglas';  // URL to web api
+    private reglassUrl: string = '/api/Regla';  // URL to web api
     regla: Regla;
     constructor(private http: Http) { }
 
@@ -25,7 +25,7 @@ export class ReglaService {
     getRegla(reglaId: number) {
       
         return this.getReglas()
-            .then(reglas => reglas.find(regla => regla.reglaId === reglaId))
+            .then(reglas => reglas.find(regla => regla.reglaId === reglaId));
        
     }
     delete(index: number) {

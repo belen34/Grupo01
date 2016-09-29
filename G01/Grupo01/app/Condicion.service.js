@@ -28,8 +28,12 @@ var CondicionService = (function () {
             .catch(this.handleError);
     };
     CondicionService.prototype.getCondicion = function (CondicionId) {
-        return this.getCondicions()
-            .then(function (Condicions) { return Condicions.find(function (Condicion) { return Condicion.condicionId === CondicionId; }); });
+        //return this.getCondicions()
+        //    .then(Condicions => Condicions.find(Condicion => Condicion.condicionId === CondicionId))
+        return this.http.get(this.CondicionsUrl + "/" + CondicionId, { headers: this.headers2 })
+            .toPromise()
+            .then(function (response) { return response.json(); })
+            .catch(this.handleError);
     };
     CondicionService.prototype.delete = function (index) {
         var url = this.CondicionsUrl + "/" + index;
@@ -38,8 +42,9 @@ var CondicionService = (function () {
             .then(function () { return null; })
             .catch(this.handleError);
     };
-    CondicionService.prototype.addCondicion = function (operadorId, operadorl1Id, operadol2rId, t1, t2) {
-        var p = new Condicion_1.Condicion(0, operadorId, operadorl1Id, operadol2rId, t1, t2);
+    CondicionService.prototype.addCondicion = function (reglaId, operadorId, operadorl1Id, operadol2rId, t1, t2) {
+        console.log("Valor de la regla en el service", reglaId);
+        var p = new Condicion_1.Condicion(0, reglaId, operadorId, operadorl1Id, operadol2rId, t1, t2);
         return this.http
             .post(this.CondicionsUrl, JSON.stringify(p), { headers: this.headers })
             .toPromise()

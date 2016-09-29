@@ -1,1 +1,1 @@
-{"version":3,"file":"regla.js","sourceRoot":"","sources":["regla.ts"],"names":[],"mappings":";AAAC;IAIG,eAAY,OAAe,EAAE,IAAY;QACrC,IAAI,CAAC,OAAO,GAAG,OAAO,CAAC;QACvB,IAAI,CAAC,IAAI,GAAG,IAAI,CAAC;IACrB,CAAC;IACL,YAAC;AAAD,CAAC,AARA,IAQA;AARa,aAAK,QAQlB,CAAA"}
+{"version":3,"file":"regla.js","sourceRoot":"","sources":["regla.ts"],"names":[],"mappings":";AAAC;IAIG,eAAY,OAAe,EAAE,MAAc;QACvC,IAAI,CAAC,OAAO,GAAG,OAAO,CAAC;QACvB,IAAI,CAAC,MAAM,GAAG,MAAM,CAAC;IACzB,CAAC;IACL,YAAC;AAAD,CAAC,AARA,IAQA;AARa,aAAK,QAQlB,CAAA"}

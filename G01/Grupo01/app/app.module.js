@@ -20,7 +20,6 @@ var dashboard_component_1 = require('./dashboard.component');
 var logico_service_1 = require('./logico.service');
 var Condicion_service_1 = require('./Condicion.service');
 var regla_service_1 = require('./regla.service');
-//dsdsfdgdfg
 var operadorcomparacion_service_1 = require('./operadorcomparacion.service');
 var logicos_add_component_1 = require('./logicos.add.component');
 var logicos_delete_component_1 = require('./logicos.delete.component');

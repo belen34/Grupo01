@@ -41,12 +41,13 @@ const appRoutes: Routes = [
     },
     {
         path: 'reglas',
-        component: CondicionsComponent
+        component: ReglasComponent
     },
     {
         path: 'deletelogico/:id',
         component: LogicosDeleteComponent
     },
+
     {
         path: 'detaillogico/:id',
         component: LogicosDetailComponent
@@ -66,7 +67,20 @@ const appRoutes: Routes = [
     {
         path: 'detail/:id',
         component: CondicionsDetailComponent
-    }
+    },
+    {
+        path: 'deleteregla/:id',
+        component: ReglasDeleteComponent
+    },
+
+    {
+        path: 'detailregla/:id',
+        component: ReglasDetailComponent
+    },
+    {
+        path: 'addregla',
+        component: ReglasAddComponent
+    },
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);

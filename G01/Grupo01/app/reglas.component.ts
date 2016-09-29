@@ -15,24 +15,29 @@ export class ReglasComponent implements OnInit {
     regla: Regla;
     reglas: Regla[];
     selectedRegla: Regla;
+    imagen: string;
     constructor(private router: Router,
         private reglaService: ReglaService) { }
     getReglas(): void {
-        this.reglaService.getReglas()
-            .then(
-            reglas => this.reglas = reglas);
+        this.reglaService.getReglas().then(
+            reglas => this.reglas
+                = reglas);
     }
     ngOnInit(): void {
         this.getReglas();
+        
     }
     onSelect(regla: Regla): void {
         this.selectedRegla = regla;
     }
-    gotoDetail(): void {
+    gotoDetail(regla: Regla): void {
         
-        this.router.navigate(['/detailregla', this.selectedRegla.reglaId])
+        this.router.navigate(['/detailregla', regla.reglaId])
     }
     delete(regla: Regla): void {
         this.router.navigate(['/deleteregla', regla.reglaId]);
+    }
+    accion(): void {
+        this.imagen = "bien";
     }
 }

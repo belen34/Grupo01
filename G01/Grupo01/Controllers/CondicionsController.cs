@@ -48,7 +48,8 @@ namespace Grupo01.Controllers
         public CondicionVO Post(CondicionVO r)
         {
 
-            return iCondicionservice.Create(r.operadorcomparacionId, r.operadorLogico1Id, r.operadorLogico2Id,r.texto1, r.texto2);
+            return iCondicionservice.Create(r.operadorcomparacionId,r.reglaId, r.operadorLogico1Id, r.operadorLogico2Id,r.texto1, r.texto2);
+
         }
 
 

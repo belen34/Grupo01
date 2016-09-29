@@ -18,8 +18,8 @@ var ReglasComponent = (function () {
     }
     ReglasComponent.prototype.getReglas = function () {
         var _this = this;
-        this.reglaService.getReglas()
-            .then(function (reglas) { return _this.reglas = reglas; });
+        this.reglaService.getReglas().then(function (reglas) { return _this.reglas
+            = reglas; });
     };
     ReglasComponent.prototype.ngOnInit = function () {
         this.getReglas();
@@ -27,11 +27,14 @@ var ReglasComponent = (function () {
     ReglasComponent.prototype.onSelect = function (regla) {
         this.selectedRegla = regla;
     };
-    ReglasComponent.prototype.gotoDetail = function () {
-        this.router.navigate(['/detailregla', this.selectedRegla.reglaId]);
+    ReglasComponent.prototype.gotoDetail = function (regla) {
+        this.router.navigate(['/detailregla', regla.reglaId]);
     };
     ReglasComponent.prototype.delete = function (regla) {
         this.router.navigate(['/deleteregla', regla.reglaId]);
+    };
+    ReglasComponent.prototype.accion = function () {
+        this.imagen = "bien";
     };
     ReglasComponent = __decorate([
         core_1.Component({

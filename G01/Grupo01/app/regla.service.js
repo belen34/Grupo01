@@ -19,7 +19,7 @@ var ReglaService = (function () {
         //maximo: number = 4;
         this.headers = new http_1.Headers({ 'Content-Type': 'application/json' });
         this.headers2 = new http_1.Headers({ 'Accept': 'application/json' });
-        this.reglassUrl = '/api/Reglas'; // URL to web api
+        this.reglassUrl = '/api/Regla'; // URL to web api
     }
     ReglaService.prototype.getReglas = function () {
         return this.http.get(this.reglassUrl, { headers: this.headers2 })

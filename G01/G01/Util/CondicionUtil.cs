@@ -23,7 +23,7 @@ namespace G01.Util
             res.OperadorComparacionObj = _condicion.OperadorComparacionObj;
             res.OperadorLogicoObj1 = _condicion.OperadorLogicoObj1;
             res.OperadorLogicoObj2 = _condicion.OperadorLogicoObj2;
-
+            res.ReglaObj = _condicion.ReglaObj;
             return res;
         }
         public CondicionVO ConviertEntityToVO(CondicionObj _condicion)
@@ -36,12 +36,13 @@ namespace G01.Util
             res.operadorLogico2Id = _condicion.operadorLogico2Id;
             res.texto1 = _condicion.texto1;
             res.texto2 = _condicion.texto2;
-            //if (_condicion.OperadorComparacionObj != null) {
-            //    res.OperadorComparacionObj = _condicion.OperadorComparacionObj;
-            //    res.OperadorLogicoObj1 = _condicion.OperadorLogicoObj1;
-            //    res.OperadorLogicoObj2 = _condicion.OperadorLogicoObj2;
-            //}
-                return res;
+          
+                res.OperadorComparacionObj = _condicion.OperadorComparacionObj;
+                res.OperadorLogicoObj1 = _condicion.OperadorLogicoObj1;
+                res.OperadorLogicoObj2 = _condicion.OperadorLogicoObj2;
+                res.ReglaObj = _condicion.ReglaObj;
+         
+            return res;
         }
 
         public ICollection<CondicionVO> ConviertEntityListToVOList(ICollection<CondicionObj> _l)

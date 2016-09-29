@@ -13,7 +13,7 @@ import { DashboardComponent } from './dashboard.component';
 import { LogicoService } from './logico.service';
 import { CondicionService } from './Condicion.service';
 import { ReglaService } from './regla.service';
-//dsdsfdgdfg
+
 import { OperadorComparacionService } from './operadorcomparacion.service';
 
 import { LogicosAddComponent } from './logicos.add.component';

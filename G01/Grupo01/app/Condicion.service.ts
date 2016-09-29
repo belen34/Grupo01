@@ -24,8 +24,12 @@ export class CondicionService {
             .catch(this.handleError);
     }
     getCondicion(CondicionId: number) {
-        return this.getCondicions()
-            .then(Condicions => Condicions.find(Condicion => Condicion.condicionId === CondicionId))
+        //return this.getCondicions()
+        //    .then(Condicions => Condicions.find(Condicion => Condicion.condicionId === CondicionId))
+        return this.http.get(this.CondicionsUrl + "/" + CondicionId, { headers: this.headers2 })
+            .toPromise()
+            .then(response => response.json() as Condicion)
+            .catch(this.handleError);
     }
     delete(index: number) {
         let url = `${this.CondicionsUrl}/${index}`;
@@ -34,9 +38,9 @@ export class CondicionService {
             .then(() => null)
             .catch(this.handleError);
     }
-    addCondicion(operadorId: number, operadorl1Id: number, operadol2rId: number, t1: string, t2: string): Promise<Condicion> {
-
-        var p = new Condicion(0, operadorId, operadorl1Id, operadol2rId, t1, t2);
+    addCondicion(reglaId: number, operadorId: number, operadorl1Id: number, operadol2rId: number, t1: string, t2: string): Promise<Condicion> {
+        console.log("Valor de la regla en el service", reglaId);
+        var p = new Condicion(0, reglaId, operadorId, operadorl1Id, operadol2rId, t1, t2);
         return this.http
             .post(this.CondicionsUrl, JSON.stringify(p), { headers: this.headers })
             .toPromise()

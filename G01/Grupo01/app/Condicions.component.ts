@@ -21,9 +21,11 @@ export class CondicionsComponent implements OnInit {
         this.CondicionService.getCondicions()
             .then(
             Condicions => this.Condicions = Condicions);
+       
     }
     ngOnInit(): void {
         this.getCondicions();
+       
     }
     onSelect(Condicion: Condicion): void {
         this.selectedCondicion = Condicion;

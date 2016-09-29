@@ -10,6 +10,7 @@ import { Component } from '@angular/core';
    <a id= "dashboard" [routerLink]="['/dashboard']" routerLinkActive="active">Dashboard</a>
    <a id= "logicos" [routerLink]="['/logicos']" routerLinkActive="active">Operadores logicos</a>
    <a id= "condiciones" [routerLink]="['/condiciones']" routerLinkActive="active">condiciones</a>
+   <a id= "reglas" [routerLink]="['/reglas']" routerLinkActive="active">reglas</a>
   </nav>
   <router-outlet></router-outlet>
   `,

@@ -1,35 +1,48 @@
-﻿<h2 id="CondicionsStorege"> Condicions almacenadas </h2>
+﻿<h2 id="CondicionsStorege"> Condiciones almacenadas </h2>
 <div *ngIf="Condicions != undefined">
     <a id="add" [routerLink]="['/addCondicion']" routerLinkActive="active">Añadir una Condicion</a>
     <table id="Condicions">
 
         <thead>
             <tr>
-                <th>Operando condicion 1</th>
-                <th>Operando condicion 2</th>
+                <th>Regla</th>
+                <th>condicion 1</th>
+                <th>condicion 2</th>
                 <th>Operando 1</th>
                 <th>Operador</th>
                 <th>Operando 2</th>
             </tr>
         </thead>
-
-        <tr *ngFor="let Condicion of Condicions" [class.selected]="Condicion === selectedCondicion"
+        <tbody>
+        <tr data-drag="true" *ngFor="let Condicion of Condicions" [class.selected]="Condicion === selectedCondicion"
             (click)="onSelect(Condicion)">
-            <td>{{Condicion.operadorLogico1Id }}</td>
-            <td>{{Condicion.operadorLogico2Id }}</td>
+            <td>{{Condicion.ReglaObj.nombre }}</td>
+            <td>{{Condicion.OperadorLogicoObj1.name }}</td>
+            <td>{{Condicion.OperadorLogicoObj2.name }}</td>
             <td> {{Condicion.texto1 }} </td>
-            <td>{{Condicion.operadorcomparacionId }}</td>
+            <td>{{Condicion.OperadorComparacionObj.name }}</td>
             <td> {{Condicion.texto2 }}  </td>
         </tr>
+        </tbody>
+      
     </table>
+    <label>Arrastra aqui las reglas aqui: </label>
+    <br />
+    <textarea data-drop="true" rows="30" cols="100"></textarea>
     <div *ngIf="selectedCondicion">
         <h2 id="MessageDetail">
             Condicion seleccionada:
-            Operando condicion 1: {{selectedCondicion.operadorLogico1Id }}
-            Operando condicion 2: {{selectedCondicion.operadorLogico2Id }}
+            <br />
+            Operando lógico 1: {{selectedCondicion.OperadorLogicoObj1.name }}
+            <br />
+            Operando lógico 2: {{selectedCondicion.OperadorLogicoObj2.name }}
+            <br />
             Operando 1: {{selectedCondicion.texto1 }} 
-            Operador: {{selectedCondicion.operadorcomparacionId }}
+            <br />
+            Operador: {{selectedCondicion.OperadorComparacionObj.name }}
+            <br />
              Operando : {{selectedCondicion.texto2 }}  
+            <br />
         </h2>
         <button id="edit" (click)="gotoDetail(selectedCondicion)">Editar Condicion</button>
         <button id="delete"

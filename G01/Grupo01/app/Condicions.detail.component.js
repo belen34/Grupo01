@@ -11,12 +11,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var router_1 = require('@angular/router');
 var Condicion_service_1 = require('./Condicion.service');
+var regla_service_1 = require('./regla.service');
 var operadorcomparacion_service_1 = require('./operadorcomparacion.service');
 var logico_service_1 = require('./logico.service');
 var CondicionsDetailComponent = (function () {
-    function CondicionsDetailComponent(CondicionService, route, operadorcomporacionService, LogicoService) {
+    function CondicionsDetailComponent(CondicionService, route, ReglaService, operadorcomporacionService, LogicoService) {
         this.CondicionService = CondicionService;
         this.route = route;
+        this.ReglaService = ReglaService;
         this.operadorcomporacionService = operadorcomporacionService;
         this.LogicoService = LogicoService;
     }
@@ -27,18 +29,31 @@ var CondicionsDetailComponent = (function () {
             _this.CondicionService.getCondicion(id)
                 .then(function (Condicion) { return _this.Condicion = Condicion; });
         });
-        console.log("Condicion en el detail", this.Condicion);
+        console.log("sfdghsf", this.Condicion);
         this.getoperadorcomporacions();
+        this.getoperadorlogicos1();
+        this.getoperadorlogicos2();
+        this.getoperadorreglas();
     };
     CondicionsDetailComponent.prototype.getoperadorcomporacions = function () {
         var _this = this;
         this.operadorcomporacionService.getoperadorcomparacions().then(function (operadorcomporacions) { return _this.operadorcomporacions
             = operadorcomporacions; });
     };
-    CondicionsDetailComponent.prototype.getoperadorlogicos = function () {
+    CondicionsDetailComponent.prototype.getoperadorlogicos1 = function () {
         var _this = this;
-        this.LogicoService.getlogicos().then(function (operadorlogico) { return _this.operadorlogico
+        this.LogicoService.getlogicos().then(function (operadorlogico) { return _this.operadorlogico1
             = operadorlogico; });
+    };
+    CondicionsDetailComponent.prototype.getoperadorlogicos2 = function () {
+        var _this = this;
+        this.LogicoService.getlogicos().then(function (operadorlogico) { return _this.operadorlogico2
+            = operadorlogico; });
+    };
+    CondicionsDetailComponent.prototype.getoperadorreglas = function () {
+        var _this = this;
+        this.ReglaService.getReglas().then(function (reglas) { return _this.reglas
+            = reglas; });
     };
     CondicionsDetailComponent.prototype.ngOnDestroy = function () {
         this.sub.unsubscribe();
@@ -56,7 +71,7 @@ var CondicionsDetailComponent = (function () {
             templateUrl: './app/Condicion.detail.component.html',
             styleUrls: ['./app/logicos.component.css'],
         }), 
-        __metadata('design:paramtypes', [Condicion_service_1.CondicionService, router_1.ActivatedRoute, operadorcomparacion_service_1.OperadorComparacionService, logico_service_1.LogicoService])
+        __metadata('design:paramtypes', [Condicion_service_1.CondicionService, router_1.ActivatedRoute, regla_service_1.ReglaService, operadorcomparacion_service_1.OperadorComparacionService, logico_service_1.LogicoService])
     ], CondicionsDetailComponent);
     return CondicionsDetailComponent;
 }());

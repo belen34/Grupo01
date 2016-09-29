@@ -17,7 +17,7 @@ var AppComponent = (function () {
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: "\n  <h1>{{title}}</h1>\n  <nav>\n   <a id= \"dashboard\" [routerLink]=\"['/dashboard']\" routerLinkActive=\"active\">Dashboard</a>\n   <a id= \"logicos\" [routerLink]=\"['/logicos']\" routerLinkActive=\"active\">Operadores logicos</a>\n   <a id= \"condiciones\" [routerLink]=\"['/condiciones']\" routerLinkActive=\"active\">condiciones</a>\n  </nav>\n  <router-outlet></router-outlet>\n  ",
+            template: "\n  <h1>{{title}}</h1>\n  <nav>\n   <a id= \"dashboard\" [routerLink]=\"['/dashboard']\" routerLinkActive=\"active\">Dashboard</a>\n   <a id= \"logicos\" [routerLink]=\"['/logicos']\" routerLinkActive=\"active\">Operadores logicos</a>\n   <a id= \"condiciones\" [routerLink]=\"['/condiciones']\" routerLinkActive=\"active\">condiciones</a>\n   <a id= \"reglas\" [routerLink]=\"['/reglas']\" routerLinkActive=\"active\">reglas</a>\n  </nav>\n  <router-outlet></router-outlet>\n  ",
             styleUrls: ['./app/logicos.component.css'],
         }), 
         __metadata('design:paramtypes', [])
